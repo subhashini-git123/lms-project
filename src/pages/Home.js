@@ -1,37 +1,93 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import Login from '../components/Login';
-import '../App.css';
+import ForgotPassword from '../components/ForgotPassword';
 
-export default function Home() {
-  const [email, setEmail] = useState('');
+const Home = () => {
+  // Login states
+  const [loginEmail, setLoginEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+
+  // Forgot password states
+  const [forgotEmail, setForgotEmail] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [forgotMessage, setForgotMessage] = useState('');
+
   const navigate = useNavigate();
 
-  const handleLogin = e => {
+  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const validatePassword = (pwd) =>
+    /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/.test(pwd);
+
+  const handleLogin = (e) => {
     e.preventDefault();
 
-    // Simple dummy validation
-    if (email === 'test@example.com' && password === '123456') {
-      alert('Login successful!');
-      setErrorMessage('');
-      navigate('/'); // redirect after login
-    } else {
-      setErrorMessage('Invalid email or password.');
+    if (!validateEmail(loginEmail)) {
+      setErrorMessage('Please enter a valid email address.');
+      return;
     }
+
+    if (!validatePassword(password)) {
+      setErrorMessage(
+        'Password must be at least 8 characters, include an uppercase letter, a number, and a special character.'
+      );
+      return;
+    }
+
+    setErrorMessage('');
+    alert('Login successful!');
+    navigate('/');
+  };
+
+  const handleSendMail = (e) => {
+    e.preventDefault();
+
+    if (!validateEmail(forgotEmail)) {
+      setForgotMessage('Please enter a valid email.');
+      return;
+    }
+
+    if (!newPassword) {
+      setForgotMessage('Please enter your new password.');
+      return;
+    }
+
+    setForgotMessage(``);
+    setForgotEmail('');
+    setNewPassword('');
   };
 
   return (
-    <div>
-      <Login
-        email={email}
-        password={password}
-        setEmail={setEmail}
-        setPassword={setPassword}
-        errorMessage={errorMessage}
-        handleLogin={handleLogin}
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Login
+            email={loginEmail}
+            setEmail={setLoginEmail}
+            password={password}
+            setPassword={setPassword}
+            errorMessage={errorMessage}
+            onLogin={handleLogin}
+          />
+        }
       />
-    </div>
+      <Route
+        path="/forgot-password"
+        element={
+          <ForgotPassword
+            email={forgotEmail}
+            setEmail={setForgotEmail}
+            newPassword={newPassword}
+            setNewPassword={setNewPassword}
+            message={forgotMessage}
+            onSendMail={handleSendMail}
+          />
+        }
+      />
+    </Routes>
   );
-}
+};
+
+export default Home;

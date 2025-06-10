@@ -2,54 +2,44 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-export default function Login({
-  email,
-  password,
-  setEmail,
-  setPassword,
-  errorMessage,
-  handleLogin,
-}) {
-  return (
-    <div className="login-container1">
+const Login = ({ email, setEmail, password, setPassword, errorMessage, onLogin }) => (
+  <div className="login-container">
+    <form onSubmit={onLogin} className="login-form">
       <h2>Login</h2>
-      <form onSubmit={handleLogin} className="login-form">
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          required
-          className="input-field"
-        />
 
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          required
-          className={`input-field ${errorMessage ? 'input-error' : ''}`}
-        />
+      <input
+        type="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="login-input"
+        required
+      />
 
-        {errorMessage && (
-          <p style={{ color: 'red', marginTop: '10px' }}>{errorMessage}</p>
-        )}
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        className="login-input"
+        required
+      />
 
-        <div className="forgot-link">
-          <Link to="/forgot-password">Forgot password?</Link>
-        </div>
+      {errorMessage && <div className="login-error">{errorMessage}</div>}
 
-        <button type="submit" className="login-button">
-          Login
-        </button>
+      <div className="forgot-password">
+        <Link to="/forgot-password">Forgot password?</Link>
+      </div>
 
-        <p className="register-text">
-          Don’t have an account? <Link to="/register">Register</Link>
-        </p>
-      </form>
-    </div>
-  );
-}
+      <button type="submit" className="login-button">
+        Login
+      </button>
+
+      <div className="register-link">
+        Don't have an account? <Link to="/register">Register</Link>
+      </div>
+    </form>
+  </div>
+);
+
+export default Login;
