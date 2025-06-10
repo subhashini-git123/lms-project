@@ -1,37 +1,67 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Login from '../components/Login';
-import '../App.css';
+// src/Home.js
+import React, { useState } from "react";
+import Register from "../components/Register";
 
-export default function Home() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-  const navigate = useNavigate();
+const Home = () => {
+  const [form, setForm] = useState({
+    username: "",
+    email: "",
+    password: "",
+    role: "",
+  });
 
-  const handleLogin = e => {
+  const [passwordError, setPasswordError] = useState("");
+
+  const roles = ["Admin / HR", "Manager", "Trainee/ Learner"];
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+
+    if (name === "password") setPasswordError("");
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simple dummy validation
-    if (email === 'test@example.com' && password === '123456') {
-      alert('Login successful!');
-      setErrorMessage('');
-      navigate('/'); // redirect after login
-    } else {
-      setErrorMessage('Invalid email or password.');
+    if (!form.username || !form.email || !form.password || !form.role) {
+      alert("Please fill in all fields.");
+      return;
     }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(form.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    const passwordPattern =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+    if (!passwordPattern.test(form.password)) {
+      setPasswordError(
+        "Password must be at least 8 characters and include uppercase, lowercase, number, and special character."
+      );
+      return;
+    }
+
+    alert(
+      `Registered successfully!\nUsername: ${form.username}\nEmail: ${form.email}\nRole: ${form.role}`
+    );
+    console.log("Form data:", form);
+
+    setForm({ username: "", email: "", password: "", role: "" });
+    setPasswordError("");
   };
 
   return (
-    <div>
-      <Login
-        email={email}
-        password={password}
-        setEmail={setEmail}
-        setPassword={setPassword}
-        errorMessage={errorMessage}
-        handleLogin={handleLogin}
-      />
-    </div>
+    <Register
+      form={form}
+      passwordError={passwordError}
+      roles={roles}
+      handleChange={handleChange}
+      handleSubmit={handleSubmit}
+    />
   );
-}
+};
+
+export default Home;
