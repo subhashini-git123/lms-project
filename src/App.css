@@ -1,113 +1,54 @@
-.login-container1 {
+/* src/App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
   max-width: 400px;
-  margin: 60px auto;
-  padding: 30px 25px;
-  background-color: #fff;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Heading */
-.login-container1 h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #333;
-  font-weight: 700;
-  font-size: 28px;
-}
-
-/* The login form */
-.login-form {
+.form {
   display: flex;
   flex-direction: column;
 }
 
-/* Labels */
-.login-form label {
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: #555;
-}
-
-/* Inputs */
-.input-field {
-  padding: 10px 14px;
-  margin-bottom: 18px;
+.input {
+  margin-bottom: 15px;
+  padding: 10px;
   font-size: 16px;
-  border: 1.8px solid #ccc;
-  border-radius: 5px;
-  transition: border-color 0.3s ease;
-  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.input-field:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
-}
-
-/* Input with error */
-.input-error {
-  border-color: #e74c3c !important;
-  box-shadow: 0 0 6px rgba(231, 76, 60, 0.5);
-}
-
-/* Error message text */
-.login-form p {
-  color: #e74c3c;
-  font-size: 14px;
-  margin-top: -14px;
-  margin-bottom: 18px;
-  text-align: center;
-}
-
-/* Forgot password link */
-.forgot-link {
-  text-align: right;
-  margin-bottom: 25px;
-}
-
-.forgot-link a {
-  color: #007bff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.forgot-link a:hover {
-  text-decoration: underline;
-}
-
-/* Login button */
-.login-button {
+.button {
+  padding: 10px;
   background-color: #007bff;
+  color: white;
+  font-weight: bold;
   border: none;
-  padding: 12px 0;
-  font-size: 18px;
-  color: #fff;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.25s ease;
-  font-weight: 600;
-  margin-bottom: 20px;
 }
 
-.login-button:hover {
+.button:hover {
   background-color: #0056b3;
 }
 
-/* Register text and link */
-.register-text {
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.login-container {
+  padding: 40px;
   text-align: center;
-  font-size: 15px;
-  color: #555;
-}
-
-.register-text a {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.register-text a:hover {
-  text-decoration: underline;
 }
