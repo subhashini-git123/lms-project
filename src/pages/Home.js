@@ -1,4 +1,3 @@
-// src/Home.js
 import React, { useState } from "react";
 import Register from "../components/Register";
 
@@ -35,8 +34,7 @@ const Home = () => {
       return;
     }
 
-    const passwordPattern =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
     if (!passwordPattern.test(form.password)) {
       setPasswordError(
         "Password must be at least 8 characters and include uppercase, lowercase, number, and special character."
