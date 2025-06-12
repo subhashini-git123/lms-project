@@ -1,55 +1,88 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-export default function Login({
-  email,
-  password,
-  setEmail,
-  setPassword,
-  errorMessage,
-  handleLogin,
-}) {
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
+  const validatePassword = (password) => {
+  const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{6,}$/;
+    return regex.test(password);
+  };
+
+  const handleLogin = () => {
+    let valid = true;
+    setEmailError("");
+    setPasswordError("");
+
+    if (!email) {
+      setEmailError("Email is required");
+      valid = false;
+    } else if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address");
+      valid = false;
+    }
+
+    if (!password) {
+      setPasswordError("Password is required");
+      valid = false;
+    } else if (!validatePassword(password)) {
+      setPasswordError(
+        "Password must be at least 6 characters and include a capital letter, number, and symbol"
+      );
+      valid = false;
+    }
+
+    if (valid) {
+      alert("Login successful!");
+    }
+  };
+
   return (
-    <div className="login-container1">
-      <h2>Login</h2>
-      <form onSubmit={handleLogin} className="login-form">
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          required
-          className="input-field"
-        />
+    <div className="login-container">
+      <h2>LOGIN</h2>
 
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          required
-          className={`input-field ${errorMessage ? 'input-error' : ''}`}
-        />
+      <label>Email</label>
+      <input
+        type="email"
+        placeholder="Enter your email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      {emailError && <p className="error-text">{emailError}</p>}
 
-        {errorMessage && (
-          <p style={{ color: 'red', marginTop: '10px' }}>{errorMessage}</p>
-        )}
+      <label>Password</label>
+      <input
+        type="password"
+        placeholder="Enter your password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      {passwordError && <p className="error-text">{passwordError}</p>}
 
-        <div className="forgot-link">
-          <Link to="/forgot-password">Forgot password?</Link>
-        </div>
+      <div className="forgot-password">
+        <Link to="/forgot-password">Forgot Password?</Link>
+      </div>
 
-        <button type="submit" className="login-button">
-          Login
-        </button>
+      <button className="login-button" onClick={handleLogin}>
+        Login
+      </button>
 
-        <p className="register-text">
-          Don’t have an account? <Link to="/register">Register</Link>
-        </p>
-      </form>
+      <p>
+        Don’t have an account?{" "}
+        <Link to="/register" className="register-link">
+          Register
+        </Link>
+      </p>
     </div>
   );
 }
+
+export default Login;
