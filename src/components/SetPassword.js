@@ -15,8 +15,7 @@ const SetPassword = () => {
       setError("Passwords do not match.");
     } else {
       setError("");
-      alert("Password reset successful!");
-      navigate("/");
+      navigate("/reset-password"); 
     }
   };
 
