@@ -23,6 +23,7 @@ function ForgotPassword() {
       </div>
       <div> <Link to="/set-password">Go to Set Password</Link></div>
     </div>
+    
   );
 }
  
