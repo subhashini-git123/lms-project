@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
- 
+
+
+
+
 function ForgotPassword() {
   return (
     <div className="login-container">
@@ -16,8 +19,11 @@ function ForgotPassword() {
  
       <div className="back-link">
         <Link to="/">← Back to Login</Link>
+       
       </div>
+      <div> <Link to="/set-password">Go to Set Password</Link></div>
     </div>
+    
   );
 }
  
