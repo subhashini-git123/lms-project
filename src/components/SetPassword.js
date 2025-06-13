@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
-
+import "./SetPassword.css"
 const SetPassword = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -20,7 +20,7 @@ const SetPassword = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-setpassword">
       <div className="form-card">
         <div className="circle" />
         <h2>Set new password</h2>

@@ -29,7 +29,8 @@ const ForgotPassword = () => {
         <Link to="/set-password" className="fp-set-password-link">Go to Set Password</Link>
       </div>
     </div>
+    
   );
-};
-
+}
+ 
 export default ForgotPassword;
