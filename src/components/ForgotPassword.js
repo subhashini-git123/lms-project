@@ -22,8 +22,11 @@ const ForgotPassword = () => {
 
       <div className="back-link">
         <Link to="/">← Back to Login</Link>
+       
       </div>
+      <div> <Link to="/set-password">Go to Set Password</Link></div>
     </div>
+    
   );
 };
 
