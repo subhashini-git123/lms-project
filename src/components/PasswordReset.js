@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
-
+import "./PasswordReset.css"
 function PasswordReset() {
   const navigate = useNavigate();
 
