@@ -16,6 +16,7 @@ body {
   width: 320px;
   text-align: center;
   border: 2px solid #ccc;
+
 }
  
 .login-container h2 {
@@ -40,6 +41,7 @@ body {
 .forgot-password {
   text-align: right;
   margin-bottom: 20px;
+
 }
  
 .forgot-password a {
@@ -47,6 +49,7 @@ body {
   color: #333;
   text-decoration: none;
   font-weight: bold;
+  color: #3333aa;
 }
  
 .login-button {
@@ -63,7 +66,7 @@ body {
 .register-link {
   font-weight: bold;
   text-decoration: none;
-  color: #000;
+   color: #3333aa;
 }
 .back-link {
   margin-top: 10px;
@@ -77,4 +80,74 @@ body {
   font-size: 0.9em;
   margin-top: 4px;
   margin-bottom: 10px;
+}
+ 
+.container {
+  width: 90%;
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+ 
+.circle {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  background-color: #66c2f2;
+  border-radius: 50%;
+}
+ 
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+ 
+.subtitle {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 25px;
+}
+ 
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}
+ 
+.btn {
+  background-color: #66c2f2;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #000;
+}
+ 
+.resend-text {
+  font-size: 14px;
+  color: #666;
+}
+ 
+.click-link {
+  color: #3333aa;
+  font-weight: bold;
+  cursor: pointer;
+}
+ 
+.back-link {
+  margin-top: 20px;
+  color: #3333aa;
+  font-size: 14px;
+  cursor: pointer;
 }
