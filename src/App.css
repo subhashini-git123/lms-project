@@ -113,15 +113,8 @@ button:hover {
   width: 350px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
-  position: relative;
-}
+  border: 2px solid #ccc;
 
-.circle {
-  width: 50px;
-  height: 50px;
-  background-color: #61c1f2;
-  border-radius: 50%;
-  margin: 0 auto 20px;
 }
 
 .instruction {
@@ -133,37 +126,28 @@ button:hover {
 .back-link {
   display: block;
   margin-top: 15px;
+}
+ 
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+ 
+.forgot-password {
+  text-align: right;
+  margin-bottom: 20px;
+
+}
+ 
+.forgot-password a {
   font-size: 0.9em;
-  color: #444;
+  color: #333;
   text-decoration: none;
-}
-
-/* ************ Password Reset Styles ************ */
-.password-reset-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f4f4f4;
-}
-
-.password-reset-card {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 16px;
-  border: 2px solid #00000020;
-  text-align: center;
-  width: 300px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.success-circle {
-  width: 60px;
-  height: 60px;
-  background-color: #98e4b3;
-  border-radius: 50%;
-  margin: 0 auto 20px auto;
-  border: 2px solid #3a6e4f;
+  font-weight: bold;
+  color: #3333aa;
 }
 
 .continue-button {
@@ -175,9 +159,11 @@ button:hover {
   border-radius: 10px;
   cursor: pointer;
 }
-
-.continue-button:hover {
-  background-color: #72d1e8;
+ 
+.register-link {
+  font-weight: bold;
+  text-decoration: none;
+   color: #3333aa;
 }
 
 .back-login {
@@ -195,4 +181,74 @@ button:hover {
   font-size: 0.9em;
   margin-top: 4px;
   margin-bottom: 10px;
+}
+ 
+.container {
+  width: 90%;
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+ 
+.circle {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  background-color: #66c2f2;
+  border-radius: 50%;
+}
+ 
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+ 
+.subtitle {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 25px;
+}
+ 
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}
+ 
+.btn {
+  background-color: #66c2f2;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #000;
+}
+ 
+.resend-text {
+  font-size: 14px;
+  color: #666;
+}
+ 
+.click-link {
+  color: #3333aa;
+  font-weight: bold;
+  cursor: pointer;
+}
+ 
+.back-link {
+  margin-top: 20px;
+  color: #3333aa;
+  font-size: 14px;
+  cursor: pointer;
 }
