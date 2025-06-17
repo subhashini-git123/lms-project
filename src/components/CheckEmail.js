@@ -17,7 +17,7 @@ const CheckEmail = () => {
       <p className="resend-text">
         Didn't receive the email? <span className="click-link">Click to resend</span>
       </p>
-      <p className="back-login" onClick={() => navigate('/')}>
+      <p className="back-to-login" onClick={() => navigate('/')}>
          {'\u2190'}Back to Login
       </p>
     </div>

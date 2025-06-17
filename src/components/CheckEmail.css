@@ -60,12 +60,13 @@
 }
 
 
-.back-login {
+.back-to-login {
   font-size: 13px;
   color: #3742fa;
   cursor: pointer;
   margin-top: 10px;
   text-decoration: none;
+  font-weight: bold;
 }
 .back-login:hover{
      text-decoration: underline;
