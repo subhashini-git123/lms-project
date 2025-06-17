@@ -4,7 +4,7 @@ import Login from "./components/Login";
 import ForgotPassword from "./components/ForgotPassword";
 import "./App.css";
 import CheckEmail from "./components/CheckEmail";
- 
+import Dashboard from "./components/Dashboard";
 import Register from "./components/Register";
 import SetPassword from "./components/SetPassword";
 import PasswordReset from "./components/PasswordReset";
@@ -18,6 +18,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/set-password" element={<SetPassword />} />
         <Route path="/reset-password" element={<PasswordReset />} />
+         <Route path="/dashboard" element={<Dashboard />} />
              <Route path="/check-email" element={<CheckEmail/>} />
       </Routes>
     </Router>

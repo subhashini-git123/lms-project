@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 import "./Register.css"
 const Register = () => {
@@ -50,7 +51,7 @@ const Register = () => {
   };
 
   return (
-    <div className="container">
+    <div className="register-container">
       <form onSubmit={handleSubmit} className="form">
         <h2>Register</h2>
 
@@ -103,9 +104,14 @@ const Register = () => {
         <button type="submit" className="button">
           Register
         </button>
+       
         <p>
-          Already have an account? <a href="/login">Login</a>
-        </p>
+       Already have an account? 
+        <Link to="/" className="register-link">
+          Login
+        </Link>
+      </p>
+ 
       </form>
     </div>
   );
