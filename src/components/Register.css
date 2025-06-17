@@ -1,44 +1,42 @@
-.container {
-  max-width: 400px;
-  margin: 50px auto;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+ .register-container{
+  width: 340px;
+  margin: 60px auto;
+  padding: 20px 16px; 
+  border: 2px solid #333;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.08);
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .input {
-  padding: 10px;
-  font-size: 16px;
+  padding: 8px; 
+  font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 .button {
-  padding: 10px 20px;
+  padding: 8px 16px; 
   background-color: #a3e4f2;
   color: #004c66;
-  font-size: 1rem;
+  font-size: 0.95rem;
   border: 2px solid #4db8cc;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
 }
+
 .button:hover {
-  background-color: #0056b3;
+  background-color: #42b6dd;
 }
 
 .error {
   color: red;
-  font-size: 14px;
+  font-size: 13px;
 }
 
-.login-container {
-  padding: 40px;
-  text-align: center;
-}

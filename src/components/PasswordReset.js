@@ -23,7 +23,7 @@ function PasswordReset() {
         <button onClick={handleContinue} className="continue-button">
           Continue
         </button>
-        <div className="back-login" onClick={() => navigate("/login")}>
+        <div className="back-login" onClick={() => navigate("/")}>
           &larr; Back to Login
         </div>
       </div>
@@ -32,3 +32,4 @@ function PasswordReset() {
 }
 
 export default PasswordReset;
+
