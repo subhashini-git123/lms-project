@@ -1,0 +1,77 @@
+.card {
+  border: 2px solid #000; 
+  border-radius: 16px;
+  padding: 12px;
+  width: 340px;
+  box-shadow: inset 0 0 0 1px #ddd; 
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+ 
+.card-banner {
+  height: 140px;
+  background: repeating-linear-gradient(
+    45deg,
+    #cceeff,
+    #cceeff 10px,
+    #e6f7ff 10px,
+    #e6f7ff 20px
+  );
+  border-radius: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #b0d9ff;
+}
+ 
+.card-tag {
+  background-color: #cceeff;
+  color: #007acc;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+ 
+.card-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+ 
+.card-progress-bar {
+  background-color: #e6e6e6;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+ 
+.card-progress {
+  height: 100%;
+  background-color: #66ccff;
+  transition: width 0.3s ease;
+}
+ 
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.card-time {
+  font-size: 0.85rem;
+  color: #555;
+}
+ 
+.card-play-btn {
+  background: none;
+  border: 2px solid #66ccff;
+  color: #66ccff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  cursor: pointer;
+} 

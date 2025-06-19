@@ -8,7 +8,7 @@ import Dashboard from "./components/Dashboard";
 import Register from "./components/Register";
 import SetPassword from "./components/SetPassword";
 import PasswordReset from "./components/PasswordReset";
-
+import Home from './pages/Home';
 function App() {
   return (
     <Router>
@@ -20,6 +20,7 @@ function App() {
         <Route path="/reset-password" element={<PasswordReset />} />
          <Route path="/dashboard" element={<Dashboard />} />
              <Route path="/check-email" element={<CheckEmail/>} />
+              <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
   );
