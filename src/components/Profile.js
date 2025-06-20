@@ -29,7 +29,7 @@ setFormData({ ...formData, [e.target.name]: e.target.value });
  
   return (
     <div className="profile-container">
-      {/* <button className="close-btn">✕</button> */}
+      {/* <button className="close-bt-profile">✕</button> */}
       <h2>Profile</h2>
       <div className="image-upload">
         <div className="profile-pic">
