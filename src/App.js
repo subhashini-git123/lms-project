@@ -7,7 +7,6 @@ import CheckEmail from "./components/CheckEmail";
 import Register from "./components/Register";
 import SetPassword from "./components/SetPassword";
 import PasswordReset from "./components/PasswordReset";
-import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -20,8 +19,6 @@ function App() {
         <Route path="/reset-password" element={<PasswordReset />} />
          <Route path="/dashboard" element={<Dashboard />} />
              <Route path="/check-email" element={<CheckEmail/>} />
-              <Route path="/dashboard" element={<Dashboard/>} />
-
       </Routes>
     </Router>
   );
