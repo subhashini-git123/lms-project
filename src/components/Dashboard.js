@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import "./Dashboard.css";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import { IoSearchSharp } from "react-icons/io5";
-
+ 
 const Dashboard = () => {
   const [showSidebar, setShowSidebar] = useState(false);
-
+  const navigate=useNavigate();
+  const handleProfile = () =>{
+     
+     navigate('/profile');
+  }
+ 
   return (
     <div className="dashboard-container">
       {/* Sidebar */}
@@ -36,7 +41,7 @@ const Dashboard = () => {
           </li>
         </ul>
       </div>
-
+ 
       {/* Main Content */}
       <div className="main">
         <div className="header">
@@ -47,7 +52,7 @@ const Dashboard = () => {
             onClick={() => setShowSidebar(true)}
           ></div>
         </div>
-
+ 
         {/* Sliding Profile Sidebar */}
         <div className={`profile-slideout ${showSidebar ? "open" : ""}`}>
           <button className="close-btn" onClick={() => setShowSidebar(false)}>
@@ -56,11 +61,11 @@ const Dashboard = () => {
           <div className="slideout-content">
             <div className="profile-circle large"></div>
             <p className="profile-name">John Doe</p>
-            <button className="profile-btn">Edit Profile</button>
+            <button className="profile-btn" onClick={handleProfile}>Edit Profile</button>
             <button className="profile-btn logout">Logout</button>
           </div>
         </div>
-
+ 
         {/* Dashboard Stats  */}
         <div className="stats-container">
           <div className="stat-box">
@@ -88,5 +93,5 @@ const Dashboard = () => {
     </div>
   );
 };
-
+ 
 export default Dashboard;
