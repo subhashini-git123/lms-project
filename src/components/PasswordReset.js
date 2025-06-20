@@ -7,7 +7,7 @@ function PasswordReset() {
 
   const handleContinue = () => {
     alert("Logged in!");
-    navigate("/dashboard");
+    navigate("/home");
   };
 
   return (
@@ -18,7 +18,7 @@ function PasswordReset() {
         <p>
           your password has been successfully reset.
           <br />
-          Click below to log in magically
+          Click below to log in 
         </p>
         <button onClick={handleContinue} className="continue-button">
           Continue
