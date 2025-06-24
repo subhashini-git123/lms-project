@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
+import Login from "./pages/Login";
 import ForgotPassword from "./components/ForgotPassword";
 import "./App.css";
-import CheckEmail from "./components/CheckEmail";
+import CheckEmail from "./pages/CheckEmail";
 import Register from "./components/Register";
 import SetPassword from "./components/SetPassword";
-import PasswordReset from "./components/PasswordReset";
-import Dashboard from "./components/Dashboard";
-import Profile from "./components/Profile";
+import PasswordReset from "./pages/PasswordReset";
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
              <Route path="/check-email" element={<CheckEmail/>} />
               <Route path="/dashboard" element={<Dashboard/>} />
                <Route path="/profile" element={<Profile />} />
+               
 
       </Routes>
     </Router>

@@ -24,13 +24,16 @@ setFormData({ ...formData, [e.target.name]: e.target.value });
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Form submitted!');
-    // Add submission logic here
   };
  
   return (
     <div className="profile-container">
-      {/* <button className="close-bt-profile">✕</button> */}
-      <h2>Profile</h2>
+      <div className='profile-header'>
+         <h2 className='profile-title'>Profile</h2>
+          <button className="close-btn-profile">   &times;</button>
+     
+      </div>
+    
       <div className="image-upload">
         <div className="profile-pic">
           {profilePic ? (
