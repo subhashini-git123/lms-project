@@ -61,6 +61,8 @@ const Dashboard = () => {
           <div className="slideout-content">
             <div className="profile-circle large"></div>
             <p className="profile-name">John Doe</p>
+            <p>Junior</p>
+            <p>Software Developer</p>
             <button className="profile-btn" onClick={handleProfile}>Edit Profile</button>
             <button className="profile-btn logout">Logout</button>
           </div>

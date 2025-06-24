@@ -1,23 +1,28 @@
 .profile-container {
   width: 50%;
   margin: 50px auto;
-  padding: 30px;
+  padding: 40px;
   border: 2px solid #cbd5e0;
   border-radius: 15px;
   text-align: center;
   position: relative;
   font-family: 'Courier New', Courier, monospace;
 }
+.profile-header{
+  display: flex;
+  justify-content: space-between;
+}
  
 .close-btn-profile {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: #a0d8ef;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
+  width: 2rem;
+    height: 2.5rem;
+    background: #a3e4f2;
+    color: #004c66;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    border: 2px solid #4db8cc;
+    top: 0;
 }
  
 .image-upload {
@@ -27,7 +32,7 @@
 .profile-pic {
   width: 120px;
   height: 120px;
-  margin: 0 auto;
+  margin: 3px auto;
   border-radius: 50%;
   overflow: hidden;
   background-color: #7dd3fc;
@@ -45,7 +50,7 @@
 .upload-btn {
   display: inline-block;
   margin-top: 10px;
-  padding: 8px 12px;
+  padding: 4px 6px;
   background-color: #e0f2fe;
   border: 1px solid #000;
   border-radius: 5px;
@@ -60,7 +65,8 @@
 .input-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
+  gap: 2rem;
 }
  
 .input-row input {
@@ -72,7 +78,8 @@
 }
  
 .submit-btn {
-  padding: 8px 20px;
+  width: 5rem;
+    height: 2.5rem;
   background-color: #bae6fd;
   border: 1px solid #000;
   border-radius: 8px;
