@@ -6,8 +6,8 @@ function PasswordReset() {
   const navigate = useNavigate();
 
   const handleContinue = () => {
-    alert("Logged in!");
-    navigate("/home");
+   
+    navigate("/card");
   };
 
   return (

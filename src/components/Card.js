@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card.css";
-
+import { IoPlay } from "react-icons/io5";
 const Card = ({
   courseTitle,
   tag,
@@ -33,7 +33,7 @@ const Card = ({
           <div className="card-footer">
             <span className="card-time">{timeLeft} left</span>
             <button className="card-play-btn" onClick={onPlay}>
-              ▶
+          <IoPlay />
             </button>
           </div>
         </>
@@ -67,4 +67,3 @@ const Card = ({
 };
 
 export default Card;
-

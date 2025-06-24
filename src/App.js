@@ -1,15 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
-import ForgotPassword from "./components/ForgotPassword";
+import ForgotPassword from "./pages/ForgotPassword";
 import "./App.css";
 import CheckEmail from "./pages/CheckEmail";
-import Register from "./components/Register";
-import SetPassword from "./components/SetPassword";
 import PasswordReset from "./pages/PasswordReset";
 import Dashboard from "./pages/Dashboard";
+import Register from "./pages/Register";
+import SetPassword from "./pages/SetPassword";
 import Profile from "./pages/Profile";
-
+import Card from "./components/Card";
+import Home from "./pages/Home";
 function App() {
   return (
     <Router>
@@ -21,7 +22,7 @@ function App() {
         <Route path="/reset-password" element={<PasswordReset />} />
          <Route path="/dashboard" element={<Dashboard />} />
              <Route path="/check-email" element={<CheckEmail/>} />
-              <Route path="/dashboard" element={<Dashboard/>} />
+            <Route path="/card" element={<Home />} />
                <Route path="/profile" element={<Profile />} />
                
 

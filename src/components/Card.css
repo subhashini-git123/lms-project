@@ -34,7 +34,7 @@
 }
  
 .card-title {
-  font-size: 1rem;
+  font-size: -1rem;
   font-weight: 500;
   margin: 0 0 12px;
   line-height: 1.4;
@@ -44,7 +44,7 @@
   background-color: #e6e6e6;
   height: 10px;
   border-radius: 6px;
-  overflow: hidden;
+margin-top: 12px;
   margin-bottom: 12px;
 }
  
@@ -71,7 +71,9 @@
   color: #66ccff;
   border-radius: 50%;
   width: 35px;
-  height: 35gitpx;
+  height: 35px;
   font-size: 1rem;
   cursor: pointer;
+  padding-left: 8px;
+  padding-top: 8px;
 } 
