@@ -11,6 +11,7 @@ import SetPassword from "./pages/SetPassword";
 import Profile from "./pages/Profile";
 import { CourseProvider } from './pages/CourseContext';
 
+
 function App() {
   return (
         <CourseProvider>
