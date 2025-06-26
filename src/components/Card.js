@@ -39,18 +39,6 @@ const Card = ({
         </>
       )}
 
-      {/* Featured Course */}
-      {isFeaturedCard && (
-        <>
-          <div className="card-tag">{category}</div>
-          <h3 className="card-title">{title}</h3>
-          <div className="card-footer space-between">
-            <span>{lessons} Lessons</span>
-            <span>{duration}</span>
-          </div>
-        </>
-      )}
-
       {/* Suggested/Popular Courses */}
       {isSuggestedCourse && (
         <>
