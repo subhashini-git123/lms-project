@@ -1,38 +1,40 @@
-                        .dashboard-container {
- 
+.dashboard-container {
   font-family: Arial, sans-serif;
 }
- 
+
 .sidebar {
   width: 220px;
   height: 100vh;
-  
+
   padding: 20px;
   position: fixed;
- 
+
   left: 0;
- 
 }
- 
+
 .sidebar .logo {
   font-size: 24px;
   margin-bottom: 10px;
 }
- 
+
 .sidebar h3 {
   font-size: 14px;
   margin-bottom: 20px;
   text-align: center;
 }
- 
+
 .sidebar ul {
   list-style: none;
   padding: 0;
 }
- 
+
 .sidebar ul li {
   padding: 12px;
   cursor: pointer;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+
 }
 .sidebar ul li.bottom {
   position: absolute;
@@ -41,18 +43,18 @@
   font-weight: bold;
   font-size: 1.2rem;
 }
- 
+
 .main {
   margin-left: 300px;
   padding: 20px;
 }
- 
+
 .header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
- 
+
 .header input {
   width: 70%;
   padding: 10px;
@@ -60,14 +62,14 @@
   border-radius: 6px;
   height: 12px;
 }
- 
+
 .stats-container {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
- 
+
 .stat-box {
   background-color: #f9f9f9;
   border: 1px solid #ccc;
@@ -92,7 +94,7 @@
   margin-left: 10px;
   margin-top: 15px;
 }
- 
+
 .sidebar-heading {
   font-weight: bold;
   font-size: 1.2rem;
@@ -105,13 +107,9 @@
   margin: 0;
   text-align: center;
 }
- 
-.sidebar ul li {
-  padding: 12px 16px;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
-}
- 
+
+
+
 .sidebar ul li:hover {
   background-color: #b3e0ef;
 }
@@ -119,20 +117,17 @@
   width: 40px;
   height: 40px;
   background-color: #7bdff2;
-   border: 1px solid #333;
+  border: 1px solid #333;
   border-radius: 50%;
   margin-left: 5rem;
 }
 .search-icon {
-    position: absolute;
-    right: 20rem;
-    top: 4.5%;
-    color: #888;
-    pointer-events: none;
+  position: absolute;
+  right: 20rem;
+  top: 4.5%;
+  color: #888;
+  pointer-events: none;
 }
-
-
-
 
 /* Sliding Sidebar */
 .profile-slideout {
@@ -193,14 +188,11 @@
 .profile-btn.logout {
   background-color: white;
   color: black;
-   border: 1px solid black;
+  border: 1px solid black;
 }
-.profile-btn.logout:hover{
+.profile-btn.logout:hover {
   background-color: #4db8cc;
 }
-.profile-btn:hover{
-   background-color: #4db8cc;
+.profile-btn:hover {
+  background-color: #4db8cc;
 }
-
-
-

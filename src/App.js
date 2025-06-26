@@ -9,9 +9,12 @@ import Dashboard from "./pages/Dashboard";
 import Register from "./pages/Register";
 import SetPassword from "./pages/SetPassword";
 import Profile from "./pages/Profile";
-import Home from "./pages/Home";
+import { CourseProvider } from './pages/CourseContext';
+
+
 function App() {
   return (
+        <CourseProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
@@ -21,12 +24,13 @@ function App() {
         <Route path="/reset-password" element={<PasswordReset />} />
          <Route path="/dashboard" element={<Dashboard />} />
              <Route path="/check-email" element={<CheckEmail/>} />
-            <Route path="/card" element={<Home />} />
+            <Route path="/card" element={<Dashboard/>} />
                <Route path="/profile" element={<Profile />} />
                
 
       </Routes>
     </Router>
+    </CourseProvider>
   );
 }
 

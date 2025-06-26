@@ -1,13 +1,17 @@
+/* === General Card Styling === */
 .card {
-  border: 2px solid #000; 
+  border: 2px solid #000;
   border-radius: 16px;
   padding: 12px;
-  width: 340px;
-  box-shadow: inset 0 0 0 1px #ddd; 
-  font-family: 'Segoe UI', sans-serif;
+  min-width: 280px;
+  width: 280px;
+  box-shadow: inset 0 0 0 1px #ddd;
+  font-family: "Segoe UI", sans-serif;
   background-color: #fff;
+  flex: 0 0 auto;
+  margin-right: 16px;
 }
- 
+
 .card-banner {
   height: 140px;
   background: repeating-linear-gradient(
@@ -21,7 +25,7 @@
   margin-bottom: 12px;
   border: 1px solid #b0d9ff;
 }
- 
+
 .card-tag {
   background-color: #cceeff;
   color: #007acc;
@@ -32,48 +36,72 @@
   margin-bottom: 10px;
   font-weight: 500;
 }
- 
+
 .card-title {
-  font-size: -1rem;
+  font-size: 1rem;
   font-weight: 500;
   margin: 0 0 12px;
   line-height: 1.4;
 }
- 
-.card-progress-bar {
-  background-color: #e6e6e6;
-  height: 10px;
-  border-radius: 6px;
-margin-top: 12px;
-  margin-bottom: 12px;
+
+/* HIDE these for consistency with popular courses */
+.card-progress-bar,
+.card-play-btn,
+.card-time {
+  display: none !important;
 }
- 
-.card-progress {
-  height: 100%;
-  background-color: #66ccff;
-  transition: width 0.3s ease;
-}
- 
+
 .card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
- 
-.card-time {
   font-size: 0.85rem;
-  color: #555;
+  color: #333;
 }
- 
-.card-play-btn {
+
+/* === Carousel Section Styling === */
+.home-container {
+  padding: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.section-header h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.scroll-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.scroll-buttons button {
   background: none;
-  border: 2px solid #66ccff;
-  color: #66ccff;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  font-size: 1rem;
+  border: none;
+  font-size: 1.8rem;
   cursor: pointer;
-  padding-left: 8px;
-  padding-top: 8px;
-} 
+  color: #007acc;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Card Scroll Container */
+.card-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card-carousel::-webkit-scrollbar {
+  display: none;
+}
