@@ -9,7 +9,6 @@ import Dashboard from "./pages/Dashboard";
 import Register from "./pages/Register";
 import SetPassword from "./pages/SetPassword";
 import Profile from "./pages/Profile";
-import Card from "./components/Card";
 import Home from "./pages/Home";
 function App() {
   return (
