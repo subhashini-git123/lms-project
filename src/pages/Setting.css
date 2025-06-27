@@ -1,0 +1,82 @@
+ .settings-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  margin-left: 50px;
+}
+
+.settings-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-right: 40rem;
+  text-align: left;
+}
+
+.change-password-form {
+  border: 2px solid #aaa;
+  padding: 30px;
+  border-radius: 10px;
+  width: 55rem;
+  background-color: #f9f9f9;
+  margin-left: 150px;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: gray;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+   margin-left: 4rem;
+}
+
+.form-left,
+.form-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-left label,
+.form-right label {
+  margin-bottom: 5px;
+}
+
+.form-left input,
+.form-right input {
+  margin-bottom: 20px;
+  padding: 2px 6px;
+  
+  height: 22px;
+  width: 16rem; 
+  border: 1px solid #ccc;
+  border-radius: 7px;
+ 
+ 
+}
+
+.update-btn {
+  display: block;
+  width: 7rem;
+  margin: 20px auto 0;
+  padding: 10px 30px;
+  background-color: #4db8cc;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+
+.update-btn:hover {
+  background-color: #3aaabf;
+}
