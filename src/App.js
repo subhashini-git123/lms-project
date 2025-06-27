@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import Register from "./pages/Register";
 import SetPassword from "./pages/SetPassword";
 import Profile from "./pages/Profile";
+
 import { CourseProvider } from './pages/CourseContext';
 
 
@@ -26,6 +27,9 @@ function App() {
              <Route path="/check-email" element={<CheckEmail/>} />
             <Route path="/card" element={<Dashboard/>} />
                <Route path="/profile" element={<Profile />} />
+
+            
+
                
 
       </Routes>

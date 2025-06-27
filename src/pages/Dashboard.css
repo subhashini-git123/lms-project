@@ -34,7 +34,6 @@
   padding: 12px 16px;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
-
 }
 .sidebar ul li.bottom {
   position: absolute;
@@ -108,8 +107,6 @@
   text-align: center;
 }
 
-
-
 .sidebar ul li:hover {
   background-color: #b3e0ef;
 }
@@ -129,7 +126,6 @@
   pointer-events: none;
 }
 
-/* Sliding Sidebar */
 .profile-slideout {
   position: fixed;
   top: 0;
@@ -195,4 +191,6 @@
 }
 .profile-btn:hover {
   background-color: #4db8cc;
-}
+} 
+
+ 
