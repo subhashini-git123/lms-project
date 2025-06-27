@@ -10,6 +10,7 @@ import Register from "./pages/Register";
 import SetPassword from "./pages/SetPassword";
 import Profile from "./pages/Profile";
 import { CourseProvider } from './pages/CourseContext';
+import LeadAssigning from "./pages/LeadAssigning";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
              <Route path="/check-email" element={<CheckEmail/>} />
             <Route path="/card" element={<Dashboard/>} />
                <Route path="/profile" element={<Profile />} />
+                 <Route path="/lead-assigning" element={<LeadAssigning />} />
                
 
       </Routes>
