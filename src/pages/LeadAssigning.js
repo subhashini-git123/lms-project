@@ -25,7 +25,6 @@ const LeadAssigning = () => {
     <div className="lead-container">
       <Sidebar />
       <div className="lead-main-content">
-        <SearchBar />
         <div className="lead-form-container">
           <h3 className="lead-heading">Manager / Lead Assigning</h3>
           <form onSubmit={handleSubmit}>
