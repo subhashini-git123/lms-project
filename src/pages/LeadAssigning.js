@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LeadAssigning.css';
 import Sidebar from '../components/Sidebar';
-import SearchBar from '../components/SearchBar';
+
 
 const LeadAssigning = () => {
   const [formData, setFormData] = useState({
