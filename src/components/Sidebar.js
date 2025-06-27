@@ -5,7 +5,7 @@ import "./Sidebar.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <div className="profile-circle"></div>
+      <div className="logo-circle"></div>
       <h3>Learning Management System</h3>
       <ul>
         <li><Link to="/dashboard" className="sidebar-heading">Dashboard</Link></li>

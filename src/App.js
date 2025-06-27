@@ -9,7 +9,6 @@ import Dashboard from "./pages/Dashboard";
 import Register from "./pages/Register";
 import SetPassword from "./pages/SetPassword";
 import Profile from "./pages/Profile";
-
 import { CourseProvider } from './pages/CourseContext';
 import LeadAssigning from "./pages/LeadAssigning";
 
