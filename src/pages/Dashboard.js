@@ -1,12 +1,14 @@
 import React, { useState, useRef } from "react";
-import "./Dashboard.css";
-import { Link, useNavigate } from "react-router-dom";
-import { IoSearchSharp, IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
+import SearchBar from "../components/SearchBar";
 import Card from "../components/Card";
+import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
 import { useCourses } from "../pages/CourseContext";
+import "./Dashboard.css";
 
 const Dashboard = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
   const navigate = useNavigate();
   const continueRef = useRef(null);
   const suggestedRef = useRef(null);
@@ -33,62 +35,25 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      {/* Sidebar */}
-      <div className="sidebar">
-        <div className="profile-circle"></div>
-        <h3>Learning Management System</h3>
-        <ul>
-          <li >
-            <Link to="/dashboard" className="sidebar-heading">Dashboard</Link>
-          </li>
-          <li >
-            <Link to="/lead-assigning" className="sidebar-heading">Lead Assigning</Link>
-          </li>
-          <li>
-            <Link to="/schedule " className="sidebar-heading">Schedule</Link>
-          </li>
-          <li >
-            <Link to="/courses" className="sidebar-heading">Courses</Link>
-          </li>
-          <li>
-            <Link to="/task-tracker" className="sidebar-heading">Task Tracker</Link>
-          </li>
-          <li>
-            <Link to="/forum-chat" className="sidebar-heading">Forum / Chat</Link>
-          </li>
-          <li className="bottom">
-            <Link to="/settings" className="sidebar-heading">Settings</Link>
-          </li>
-        </ul>
-      </div>
+      <Sidebar />
+      <div className="main-content">
+        <SearchBar />
+        <div className="profile-icon" onClick={() => setShowProfile(true)}></div>
 
-      {/* Main Content */}
-      <div className="main">
-        {/* Top Header */}
-        <div className="header">
-          <input type="text" placeholder="Search Courses" />
-          <IoSearchSharp className="search-icon" />
-          <div className="profile-circle" onClick={() => setShowSidebar(true)}></div>
-        </div>
-
-        {/* Slideout Sidebar */}
-        <div className={`profile-slideout ${showSidebar ? "open" : ""}`}>
-          <button className="close-btn" onClick={() => setShowSidebar(false)}>
-            &times;
-          </button>
-          <div className="slideout-content">
-            <div className="profile-circle large"></div>
-            <p className="profile-name">John Doe</p>
-            <p>Junior</p>
-            <p>Software Developer</p>
-            <button className="profile-btn" onClick={handleProfile}>
-              Edit Profile
-            </button>
-            <button className="profile-btn logout">Logout</button>
+        {showProfile && (
+          <div className="profile-slideout open">
+            <button className="close-btn" onClick={() => setShowProfile(false)}>&times;</button>
+            <div className="slideout-content">
+              <div className="profile-circle large"></div>
+              <p className="profile-name">John Doe</p>
+              <p>Junior</p>
+              <p>Software Developer</p>
+              <button className="profile-btn" onClick={handleProfile}>Edit Profile</button>
+              <button className="profile-btn logout">Logout</button>
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* Stats Section */}
         <div className="stats-container">
           <div className="stat-box">
             <h6 className="stat-heading">Total Hours Spent</h6>
@@ -112,19 +77,17 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Continue Learning Section */}
-
         <div className="section-header">
-  <h2>Continue Learning</h2>
-  <div className="scroll-buttons">
-    <button onClick={() => scroll(continueRef, 'left')}>
-      <IoArrowBackCircleOutline />
-    </button>
-    <button onClick={() => scroll(continueRef, 'right')}>
-      <IoArrowForwardCircleOutline />
-    </button>
-  </div>
-</div>
+          <h2>Continue Learning</h2>
+          <div className="scroll-buttons">
+            <button onClick={() => scroll(continueRef, "left")}>
+              <IoArrowBackCircleOutline />
+            </button>
+            <button onClick={() => scroll(continueRef, "right")}>
+              <IoArrowForwardCircleOutline />
+            </button>
+          </div>
+        </div>
 
         <div className="card-carousel" ref={continueRef}>
           {continueCourses.map((course, idx) => (
@@ -139,7 +102,6 @@ const Dashboard = () => {
           ))}
         </div>
 
-        {/* Suggested Courses Section */}
         <div className="section-header">
           <h2>Popular / Suggested Courses</h2>
           <div className="scroll-buttons">
@@ -151,6 +113,7 @@ const Dashboard = () => {
             </button>
           </div>
         </div>
+
         <div className="card-carousel" ref={suggestedRef}>
           {suggestedCourses.map((course, idx) => (
             <Card
@@ -163,9 +126,14 @@ const Dashboard = () => {
           ))}
         </div>
       </div>
-    </div>  
+    </div>
   );
-  
 };
 
 export default Dashboard;
+   
+
+
+
+
+

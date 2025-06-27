@@ -1,0 +1,76 @@
+.lead-container {
+  display: flex;
+  width: 100%;
+}
+
+.lead-main-content {
+  margin-left: 300px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lead-form-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 20px;
+}
+
+.lead-heading {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.lead-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.lead-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.lead-field label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.lead-field select {
+  height: 35px;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.lead-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.lead-button button {
+  padding: 10px 20px;
+  background-color: #4db8cc;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.lead-button button:hover {
+  background-color: #3aaabf;
+}
