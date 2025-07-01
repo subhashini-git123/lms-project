@@ -10,6 +10,10 @@ import "./Dashboard.css";
 const Dashboard = () => {
   const [showProfile, setShowProfile] = useState(false);
   const navigate = useNavigate();
+
+
+
+  
   const continueRef = useRef(null);
   const suggestedRef = useRef(null);
 
