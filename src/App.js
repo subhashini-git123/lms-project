@@ -12,7 +12,8 @@ import Profile from "./pages/Profile";
 import { CourseProvider } from './pages/CourseContext';
 import LeadAssigning from "./pages/LeadAssigning";
 import Setting from './pages/Setting'
-
+import Courses from "./pages/Courses";
+import CourseDetail from "./pages/CourseDetail";
 
 function App() {
   return (
@@ -30,8 +31,8 @@ function App() {
                <Route path="/profile" element={<Profile />} />
                  <Route path="/lead-assigning" element={<LeadAssigning />} />
                  <Route path="/settings" element={<Setting />} />
-               
-
+                 <Route path="/Courses" element={<Courses />} />
+                  <Route path="/courses/:id" element={<CourseDetail />} />
       </Routes>
     </Router>
     </CourseProvider>
