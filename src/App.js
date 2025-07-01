@@ -14,6 +14,10 @@ import LeadAssigning from "./pages/LeadAssigning";
 import Setting from './pages/Setting'
 import Courses from "./pages/Courses";
 import CourseDetail from "./pages/CourseDetail";
+import Schedule from "./pages/Schedule";
+import 'primereact/resources/themes/lara-light-blue/theme.css';  // or another theme
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 
 function App() {
   return (
@@ -33,6 +37,7 @@ function App() {
                  <Route path="/settings" element={<Setting />} />
                  <Route path="/Courses" element={<Courses />} />
                   <Route path="/courses/:id" element={<CourseDetail />} />
+                  <Route path="/schedule" element={<Schedule/>}></Route>
       </Routes>
     </Router>
     </CourseProvider>
