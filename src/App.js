@@ -18,6 +18,8 @@ import Schedule from "./pages/Schedule";
 import 'primereact/resources/themes/lara-light-blue/theme.css';  // or another theme
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
+import Upload from './pages/Upload'
+import Chat from './pages/Chat'
 
 function App() {
   return (
@@ -38,6 +40,9 @@ function App() {
                  <Route path="/Courses" element={<Courses />} />
                   <Route path="/courses/:id" element={<CourseDetail />} />
                   <Route path="/schedule" element={<Schedule/>}></Route>
+                   <Route path="/upload" element={<Upload />} />
+                     <Route path="/Forum-chat" element={<Chat />} />
+
       </Routes>
     </Router>
     </CourseProvider>

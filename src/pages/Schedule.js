@@ -56,6 +56,7 @@ const Schedule = () => {
   return (
     <div className="schedule-container">
       <Sidebar />
+      <div className="calendar-container">
 
       <div className="calendar-panel">
         <Calendar inline dateTemplate={dateTemplate} showWeek={false} />
@@ -85,6 +86,7 @@ const Schedule = () => {
           ))}
         </div>
       )}
+    </div>
     </div>
   );
 };

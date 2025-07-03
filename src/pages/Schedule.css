@@ -1,12 +1,14 @@
-.schedule-container {
+.calendar-container{
   display: flex;
-  padding: 2rem;
+  padding: 20px;
   gap: 2rem;
-  margin-left: 250px;
+  margin-left: 300px;
+
 }
 
 .calendar-panel {
   width: 600px;
+    margin-top: 112px;
 }
 .p-datepicker table {
   table-layout: fixed;
