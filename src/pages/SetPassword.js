@@ -45,7 +45,7 @@ const SetPassword = () => {
 
         {error && <p className="error">{error}</p>}
 
-        <button onClick={handleReset}>Reset Password</button>
+        <button className="setpassword-btn"  onClick={handleReset}>Reset Password</button>
         <a href="/" className="back-link">
           ← Back to login
         </a>

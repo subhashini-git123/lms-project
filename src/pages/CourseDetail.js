@@ -15,7 +15,8 @@ const CourseDetail = () => {
   const navigate = useNavigate();
 
   const course = suggestedCourses[id];
-  if (!course) return <div className="course-detail-container">Course not found.</div>;
+  if (!course)
+    return <div className="course-detail-container">Course not found.</div>;
 
   return (
     <div className="course-detail-container">
@@ -24,7 +25,8 @@ const CourseDetail = () => {
         <Toggle/>
         <h2>{course.title}</h2>
         <p className="subtitle">
-          Master {course.title} to create Web Applications & go from basic to advanced
+          Master {course.title} to create Web Applications & go from basic to
+          advanced
         </p>
         <p className="updated-date">Last Update January 24, 2025</p>
       </div>
@@ -63,16 +65,19 @@ const CourseDetail = () => {
               <div>
                 <h4>Description</h4>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                  has been the industry's standard dummy text ever since the 1500s,
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s,
                 </p>
                 <p>
-                  when an unknown printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but also the leap into
-                  electronic typesetting, remaining essentially unchanged. It was popularised in the
-                  1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                  recently with desktop publishing software like Aldus PageMaker including versions of
-                  Lorem Ipsum.
+                  when an unknown printer took a galley of type and scrambled it
+                  to make a type specimen book. It has survived not only five
+                  centuries, but also the leap into electronic typesetting,
+                  remaining essentially unchanged. It was popularised in the
+                  1960s with the release of Letraset sheets containing Lorem
+                  Ipsum passages, and more recently with desktop publishing
+                  software like Aldus PageMaker including versions of Lorem
+                  Ipsum.
                 </p>
               </div>
             )}
@@ -98,28 +103,32 @@ const CourseDetail = () => {
         </div>
 
         <div className="course-sidebar">
-        <div className="thumbnail">
-<div className="play-button"><FaPlay /></div>
-</div>
+          <div className="thumbnail">
+            <div className="play-button">
+              <FaPlay />
+            </div>
+          </div>
 
-           <button
-    className="start-button"
-    onClick={() => navigate(`/course/${id}/start`)}
-  >
-    Start now
-  </button>
+          <button
+            className="start-button"
+            onClick={() => navigate(`/course/${id}/start`)}
+          >
+            Start now
+          </button>
           <ul className="course-info-list">
             <li>
-             <GoBook /> <strong>Duration</strong> <span>{course.duration}</span>
+              <GoBook /> <strong>Duration</strong>{" "}
+              <span>{course.duration}</span>
             </li>
             <li>
-             <RxClock /> <strong>Lectures</strong> <span>{course.lessons}</span>
+              <RxClock /> <strong>Lectures</strong>{" "}
+              <span>{course.lessons}</span>
             </li>
             <li>
-             <BsWatch /> <strong>Skill Level</strong> <span>Beginner</span>
+              <BsWatch /> <strong>Skill Level</strong> <span>Beginner</span>
             </li>
             <li>
-            <BsSliders />  <strong>Deadline</strong> <span>4 March 2025</span>
+              <BsSliders /> <strong>Deadline</strong> <span>4 March 2025</span>
             </li>
           </ul>
         </div>

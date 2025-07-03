@@ -42,20 +42,46 @@
   margin: 0 0 12px;
   line-height: 1.4;
 }
+ .card-progress-bar {
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+ 
+.card-progress {
+  height: 100%;
+  background-color: #007acc;
+  transition: width 0.3s ease-in-out;
+} 
 
-/* HIDE these for consistency with popular courses */
-.card-progress-bar,
-.card-play-btn,
-.card-time {
-  display: none !important;
+
+ .card-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #666;
+  font-size: 0.85rem;
 }
 
+
+.card-play-btn{
+    border-radius: 50%;
+    border: 1.5px solid #AAB4B4;
+    background-color: white;
+}
+.play-icon{
+  left: 5px;
+      padding-top: 3px;
+    padding-left: 2px;
+        color: #AAB4B4;
+
+}
 .card-footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.85rem;
-  color: #333;
+   justify-content: space-between;
+
 }
 
 /* === Carousel Section Styling === */
