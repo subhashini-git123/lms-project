@@ -1,0 +1,139 @@
+.calendar-container{
+  display: flex;
+  padding: 20px;
+  gap: 2rem;
+  margin-left: 300px;
+
+}
+
+.calendar-panel {
+  width: 600px;
+    margin-top: 112px;
+}
+.p-datepicker table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.p-datepicker table td {
+  padding: 0 !important;
+  width: 14.28%;
+}
+
+.p-datepicker table td span {
+  display: block;
+  width: 100%;
+  min-width: 55px;
+  max-width: 95px;
+  height: 42px;
+  padding-top: 8px;
+  text-align: center;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.p-datepicker table td span:hover {
+  background-color: #f0f0f0;
+  cursor: default;
+}
+
+.red-dot {
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.p-datepicker .p-datepicker-header {
+  background-color: transparent;
+  border: none;
+}
+
+.p-datepicker th {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  font-size: 14px;
+}
+
+.p-datepicker td.p-highlight > span {
+  background-color: #d6eaff !important;
+  border-color: #007bff;
+  font-weight: bold;
+}
+
+.details-panel {
+  width: 25rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 2rem;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2rem;
+}
+
+.course-card {
+  border: 1px solid #007bff;
+  background-color: #e7f3ff;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.75rem;
+  width: 100%;
+  max-width: 20rem;
+  font-size: 0.85rem;
+}
+
+.course-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.start-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  height: 22px;
+  width: 50px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 0 0.5rem;
+}
+
+.course-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.due-date {
+  color: #666;
+}

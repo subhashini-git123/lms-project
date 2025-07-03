@@ -1,9 +1,9 @@
- .settings-container {
+ .settings-page-div {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 112px;
   margin-left: 50px;
 }
 

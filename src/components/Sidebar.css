@@ -12,7 +12,7 @@
   margin-bottom: 20px;
   text-align: center;
 }
- .sidebar ul {
+.sidebar ul {
   list-style: none;
   padding: 0;
   text-align: center;
@@ -26,14 +26,14 @@
 .sidebar ul li:hover {
   background-color: #b3e0ef;
 }
- 
+
 .sidebar-heading {
   font-weight: bold;
   font-size: 1.2rem;
   text-decoration: none;
   color: black;
 }
- 
+
 .sidebar ul li.bottom {
   position: absolute;
   bottom: 2px;
@@ -48,12 +48,8 @@
   border: 1px solid #333;
   border-radius: 50%;
   margin: 0 auto 1rem;
- 
 }
- 
- 
- 
- 
- 
- 
- 
+
+
+
+
