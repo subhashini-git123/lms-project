@@ -7,6 +7,7 @@ import { GoBook } from "react-icons/go";
 import { RxClock } from "react-icons/rx";
 import { BsWatch } from "react-icons/bs";
 import { BsSliders } from "react-icons/bs";
+import Toggle from '../components/Toggle'
 const CourseDetail = () => {
   const { id } = useParams();
   const { suggestedCourses } = useCourses();
@@ -18,7 +19,9 @@ const CourseDetail = () => {
 
   return (
     <div className="course-detail-container">
+       
       <div className="course-header">
+        <Toggle/>
         <h2>{course.title}</h2>
         <p className="subtitle">
           Master {course.title} to create Web Applications & go from basic to advanced
