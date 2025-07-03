@@ -1,6 +1,6 @@
 .hamburger {
-  position: fixed;
-  top: 25px;
+  position: relative;
+ 
   font-size: 26px;
   background: none;
   border: none;

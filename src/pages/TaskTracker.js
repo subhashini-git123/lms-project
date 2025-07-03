@@ -148,7 +148,7 @@ import { useCourses } from "../pages/CourseContext";
 import "./TaskTracker.css";
 import { IoPersonSharp } from "react-icons/io5";
 import Card from "../components/Card";
-
+import Toggle from "../components/Toggle";
 const TaskTracker = () => {
   const { continueCourses, suggestedCourses } = useCourses(); 
   const [activeTab, setActiveTab] = useState("completed","inprogress");   
@@ -157,6 +157,7 @@ const TaskTracker = () => {
     <div className="task-tracker">
       {/* Trainee Info */}
       <div className="trainee-card">
+        <Toggle/>
         <div>
           <IoPersonSharp className="trainee-photo" />
         </div>

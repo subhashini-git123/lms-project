@@ -20,7 +20,7 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import Upload from './pages/Upload'
 import Chat from './pages/Chat'
-
+import TaskTracker from './pages/TaskTracker'
 function App() {
   return (
         <CourseProvider>
@@ -42,7 +42,7 @@ function App() {
                   <Route path="/schedule" element={<Schedule/>}></Route>
                    <Route path="/upload" element={<Upload />} />
                      <Route path="/Forum-chat" element={<Chat />} />
-
+  <Route path="/task-tracker" element={<TaskTracker/>} />
       </Routes>
     </Router>
     </CourseProvider>
