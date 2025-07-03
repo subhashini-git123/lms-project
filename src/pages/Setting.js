@@ -58,9 +58,9 @@ const Setting = () => {
   };
 
   return (
-    <div className="setting-page">
-        <Sidebar/>
     <div className="settings-container">
+        <Sidebar/>
+    <div className="settings-page-div">
       <h2 className="settings-title">Settings</h2>
       <form className="change-password-form" onSubmit={handleSubmit}>
         <h3 className="form-title">Change Password</h3>
