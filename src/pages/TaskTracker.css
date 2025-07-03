@@ -1,6 +1,7 @@
 .task-tracker {
   padding: 2rem;
-  font-family: Arial, sans-serif;
+width: 70rem;
+margin-left: 300px;
 }
 
 .trainee-card {
@@ -80,7 +81,7 @@ border-radius: 10px;
 .tracker-container{
        display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 67px;
+    gap: 45px;
     padding: 50px;
     box-sizing: border-box; 
 }
