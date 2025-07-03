@@ -1,9 +1,8 @@
-import React, { createContext, useContext, } from "react";
+import React, { createContext, useContext } from "react";
 
 const CourseContext = createContext();
 
 export const CourseProvider = ({ children }) => {
-  
   const continueCourses = [
     {
       title: "HTML and CSS Basics to Advanced Complete Course",
@@ -51,6 +50,18 @@ export const CourseProvider = ({ children }) => {
       lessons: 32,
     },
     {
+      title: "Node.js Masterclass",
+      tag: "Backend",
+      duration: "4h10min",
+      lessons: 32,
+    },
+       {
+      title: "Node.js Masterclass",
+      tag: "Backend",
+      duration: "4h10min",
+      lessons: 32,
+    },
+       {
       title: "Node.js Masterclass",
       tag: "Backend",
       duration: "4h10min",

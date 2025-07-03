@@ -1,6 +1,7 @@
 import React from "react";
 import "./Card.css";
-import { IoPlay } from "react-icons/io5";
+import { IoPlayOutline } from "react-icons/io5";
+import { FiClock } from "react-icons/fi";
 const Card = ({
   courseTitle,
   tag,
@@ -11,6 +12,7 @@ const Card = ({
   duration,
   category,
   lessons,
+   hideFooter = false, 
 }) => {
   const isLearningCard = courseTitle !== undefined;
   const isFeaturedCard = category !== undefined;
@@ -30,12 +32,18 @@ const Card = ({
               <div className="card-progress" style={{ width: `${progress}%` }}></div>
             </div>
           )}
+ {!hideFooter && (
           <div className="card-footer">
-            <span className="card-time">{timeLeft} left</span>
-            <button className="card-play-btn" onClick={onPlay}>
-          <IoPlay />
-            </button>
-          </div>
+
+<span className="card-time">
+<FiClock style={{ marginRight: '6px' }} />
+  {timeLeft} left
+</span>
+<button className="card-play-btn" onClick={onPlay}>
+<IoPlayOutline className="playbutton" />
+</button>
+</div>
+ )}
         </>
       )}
 

@@ -8,6 +8,7 @@ import { useCourses } from "../pages/CourseContext";
 
 const Courses = () => {
   const { suggestedCourses } = useCourses();
+ const { continueCourses } = useCourses(); 
 
   return (
     <div className="dashboard-container">
@@ -29,6 +30,21 @@ const Courses = () => {
               />
             </Link>
           ))}
+
+          {continueCourses.map((course, index) => (
+            <Link
+              to={`/courses/${index}`}
+              key={index}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <Card
+                tag={course.tag}
+                title={course.title}
+                duration={course.duration}
+                lessons={course.lessons}
+              />
+            </Link>
+          ))}
         </div>
       </div>
     </div>
@@ -36,3 +52,4 @@ const Courses = () => {
 };
 
 export default Courses;
+
