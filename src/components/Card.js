@@ -12,7 +12,7 @@ const Card = ({
   duration,
   category,
   lessons,
-   hideFooter = false, 
+  hideFooter = false,
 }) => {
   const isLearningCard = courseTitle !== undefined;
   const isFeaturedCard = category !== undefined;
@@ -29,21 +29,23 @@ const Card = ({
           <h3 className="card-title">{courseTitle}</h3>
           {progress !== undefined && (
             <div className="card-progress-bar">
-              <div className="card-progress" style={{ width: `${progress}%` }}></div>
+              <div
+                className="card-progress"
+                style={{ width: `${progress}%` }}
+              ></div>
             </div>
           )}
- {!hideFooter && (
-          <div className="card-footer">
-
-<span className="card-time">
-<FiClock style={{ marginRight: '6px' }} />
-  {timeLeft} left
-</span>
-<button className="card-play-btn" onClick={onPlay}>
-<IoPlayOutline className="playbutton" />
-</button>
-</div>
- )}
+          {!hideFooter && (
+            <div className="card-footer">
+              <span className="card-time">
+                <FiClock style={{ marginRight: "6px" }} />
+                {timeLeft} left
+              </span>
+              <button className="card-play-btn" onClick={onPlay}>
+                <IoPlayOutline className="playbutton" />
+              </button>
+            </div>
+          )}
         </>
       )}
 

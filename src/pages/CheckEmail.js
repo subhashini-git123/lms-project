@@ -1,13 +1,13 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './CheckEmail.css';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./CheckEmail.css";
 
 const CheckEmail = () => {
   const navigate = useNavigate();
 
-  const handleEmail = () =>{
+  const handleEmail = () => {
     navigate("/set-password");
-  }
+  };
 
   return (
     <div className="check-email-container">
@@ -17,12 +17,15 @@ const CheckEmail = () => {
         We sent a password reset link to <br />
         <span className="email-address">lucida@gmail.com</span>
       </p>
-      <button className="open-app-button" onClick={handleEmail}>Open Email</button>
+      <button className="open-app-button" onClick={handleEmail}>
+        Open Email
+      </button>
       <p className="resend-text">
-        Didn't receive the email? <span className="click-link">Click to resend</span>
+        Didn't receive the email?{" "}
+        <span className="click-link">Click to resend</span>
       </p>
-      <p className="back-to-login" onClick={() => navigate('/')}>
-         {'\u2190'}Back to Login
+      <p className="back-to-login" onClick={() => navigate("/")}>
+        {"\u2190"}Back to Login
       </p>
     </div>
   );

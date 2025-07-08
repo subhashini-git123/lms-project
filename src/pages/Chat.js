@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import './Chat.css';
-import Sidebar from '../components/Sidebar';
+import React, { useState } from "react";
+import "./Chat.css";
+import Sidebar from "../components/Sidebar";
 
 const Chat = () => {
   const [messages, setMessages] = useState([
-    { sender: 'user', text: '..............' },
-    { sender: 'manager', text: '.............' }
+    { sender: "user", text: ".............." },
+    { sender: "manager", text: "............." },
   ]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
 
   const handleSend = () => {
     if (input.trim()) {
-      setMessages([...messages, { sender: 'user', text: input }]);
-      setInput('');
+      setMessages([...messages, { sender: "user", text: input }]);
+      setInput("");
     }
   };
 
@@ -24,10 +24,14 @@ const Chat = () => {
 
         <div className="chat-body">
           {messages.map((msg, index) => {
-            const isUser = msg.sender === 'user';
-            const messageClass = isUser ? 'chat-message left' : 'chat-message right';
-            const avatarClass = isUser ? 'avatar blue' : 'avatar orange';
-            const bubbleClass = isUser ? 'message-bubble user' : 'message-bubble manager';
+            const isUser = msg.sender === "user";
+            const messageClass = isUser
+              ? "chat-message left"
+              : "chat-message right";
+            const avatarClass = isUser ? "avatar blue" : "avatar orange";
+            const bubbleClass = isUser
+              ? "message-bubble user"
+              : "message-bubble manager";
 
             return (
               <div key={index} className={messageClass}>
@@ -45,7 +49,9 @@ const Chat = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
-          <button onClick={handleSend} className="send-button">→</button>
+          <button onClick={handleSend} className="send-button">
+            →
+          </button>
         </div>
       </div>
     </div>
