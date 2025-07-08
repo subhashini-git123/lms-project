@@ -15,7 +15,7 @@ import Setting from './pages/Setting'
 import Courses from "./pages/Courses";
 import CourseDetail from "./pages/CourseDetail";
 import Schedule from "./pages/Schedule";
-import 'primereact/resources/themes/lara-light-blue/theme.css';  // or another theme
+import 'primereact/resources/themes/lara-light-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import Upload from './pages/Upload'

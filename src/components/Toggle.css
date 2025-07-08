@@ -1,5 +1,6 @@
 .hamburger {
-  position: relative;
+  position: absolute;
+  top: 29px;
  
   font-size: 26px;
   background: none;

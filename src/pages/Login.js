@@ -79,7 +79,7 @@ function Login() {
       </button>
 
       <p>
-        Don’t have an account?{" "}
+        Don't have an account?{" "}
         <Link to="/register" className="register-link">
           Register
         </Link>
