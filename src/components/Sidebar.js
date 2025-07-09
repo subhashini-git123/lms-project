@@ -1,53 +1,60 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 
 const Sidebar = () => {
+  const location = useLocation(); 
+
   return (
     <div className="sidebar">
       <div className="logo-circle"></div>
       <h3>Learning Management System</h3>
       <ul>
-        <li>
-          <Link to="/dashboard" className="sidebar-heading">
+        <li className={location.pathname === "/dashboard" ? "active-li" : ""}>
+          <NavLink to="/dashboard" className="sidebar-heading">
             Dashboard
-          </Link>
+          </NavLink>
         </li>
-        <li>
-          <Link to="/lead-assigning" className="sidebar-heading">
+        <li className={location.pathname === "/lead-assigning" ? "active-li" : ""}>
+          <NavLink to="/lead-assigning" className="sidebar-heading">
             Lead Assigning
-          </Link>
+          </NavLink>
         </li>
-        <li>
-          <Link to="/schedule" className="sidebar-heading">
+        <li className={location.pathname === "/schedule" ? "active-li" : ""}>
+          <NavLink to="/schedule" className="sidebar-heading">
             Schedule
-          </Link>
+          </NavLink>
         </li>
-        <li>
-          <Link to="/courses" className="sidebar-heading">
+        <li className={location.pathname === "/courses" ? "active-li" : ""}>
+          <NavLink to="/courses" className="sidebar-heading">
             Courses
-          </Link>
+          </NavLink>
         </li>
-        <li>
-          <Link to="/task-tracker" className="sidebar-heading">
+        <li className={location.pathname === "/task-tracker" ? "active-li" : ""}>
+          <NavLink to="/task-tracker" className="sidebar-heading">
             Task Tracker
-          </Link>
+          </NavLink>
         </li>
-        <li>
-          <Link to="/forum-chat" className="sidebar-heading">
+        <li className={location.pathname === "/forum-chat" ? "active-li" : ""}>
+          <NavLink to="/forum-chat" className="sidebar-heading">
             Forum / Chat
-          </Link>
+          </NavLink>
         </li>
-        <li>
-          <Link to="/upload" className="sidebar-heading">
+        <li className={location.pathname === "/upload" ? "active-li" : ""}>
+          <NavLink to="/upload" className="sidebar-heading">
             Upload
-          </Link>
+          </NavLink>
         </li>
-        <li className="bottom">
-          <Link to="/settings" className="sidebar-heading">
-            Settings
-          </Link>
-        </li>
+       <li className="bottom">
+  <NavLink
+    to="/settings"
+    className={`sidebar-heading ${
+      location.pathname === "/settings" ? "active-settings-text" : ""
+    }`}
+  >
+    Settings
+  </NavLink>
+</li>
       </ul>
     </div>
   );

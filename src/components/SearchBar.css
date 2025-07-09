@@ -1,4 +1,4 @@
-.search-container {
+/* .search-container {
   position: relative;
   width: 70%;
   margin: 20px 0;
@@ -22,4 +22,29 @@
   color: #888;
   font-size: 1.2rem;
   pointer-events: none;
+} */
+
+.search-icon {
+  position: absolute;
+  font-size: 17px;
+  color: #555;
+  position: absolute;
+  right: 15rem;
+
+  top: 30px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+width: 80%;
+  font-size: 16px;
+  background: transparent;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.search-input::placeholder {
+  color: #888;
+  font-weight: 400;
 }

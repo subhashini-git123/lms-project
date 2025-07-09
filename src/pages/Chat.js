@@ -4,8 +4,8 @@ import Sidebar from "../components/Sidebar";
 
 const Chat = () => {
   const [messages, setMessages] = useState([
-    { sender: "user", text: ".............." },
-    { sender: "manager", text: "............." },
+    { sender: "user", text: "................................" },
+    { sender: "manager", text: "................................" },
   ]);
   const [input, setInput] = useState("");
 
