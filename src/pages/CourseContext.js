@@ -5,6 +5,10 @@ const CourseContext = createContext();
 export const CourseProvider = ({ children }) => {
   const continueCourses = [
     {
+        title: "Node.js Basics to Advanced Complete Course",
+      tag: "Backend",
+      duration: "2h48min",
+      progress: 45,
     },
     {
       title: "Node.js Basics to Advanced Complete Course",

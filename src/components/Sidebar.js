@@ -1,13 +1,14 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "./Sidebar.css";
+import logo from '../assets/logo.png';
 
 const Sidebar = () => {
   const location = useLocation(); 
 
   return (
     <div className="sidebar">
-      <div className="logo-circle"></div>
+    <img src={logo} alt="Logo" className="sidebar-logo" />
       <h3>Learning Management System</h3>
       <ul>
         <li className={location.pathname === "/dashboard" ? "active-li" : ""}>
