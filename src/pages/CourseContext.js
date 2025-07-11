@@ -4,28 +4,34 @@ const CourseContext = createContext();
 
 export const CourseProvider = ({ children }) => {
   const continueCourses = [
-    {
-        title: "Node.js Basics to Advanced Complete Course",
-      tag: "Backend",
-      duration: "2h48min",
-      progress: 45,
+      {
+      title: "ReactJs for Beginners",
+      tag: "Frontend",
+      duration: "3h20min",
+      progress: 70,
     },
     {
-      title: "Node.js Basics to Advanced Complete Course",
+      title: "Python for Beginners",
       tag: "Backend",
-      duration: "2h48min",
-      progress: 45,
+      duration: "3h20min",
+      progress: 25,
     },
     {
-      title: "Node.js Basics to Advanced Complete Course",
+      title: "Advanced JavaScript Techniques",
+      tag: "Frontend",
+      duration: "4h10min",
+      progress: 55,
+    },
+    {
+      title: "Fullstack Development",
       tag: "Backend",
-      duration: "2h48min",
+      duration: "5h15min",
       progress: 20,
     },
     {
-      title: "Node.js Basics to Advanced Complete Course",
-      tag: "Backend",
-      duration: "2h48min",
+      title: "Introduction to TypeScript",
+      tag: "Frontend",
+      duration: "2h45min",
       progress: 20,
     },
   ];
@@ -50,22 +56,22 @@ export const CourseProvider = ({ children }) => {
       lessons: 32,
     },
     {
-      title: "Node.js Masterclass",
+      title: "Go Language Crash Course",
       tag: "Backend",
-      duration: "4h10min",
-      lessons: 32,
+      duration: "3h40min",
+      lessons: 28,
     },
     {
-      title: "Node.js Masterclass",
-      tag: "Backend",
-      duration: "4h10min",
-      lessons: 32,
+      title: "Swift Programming for iOS",
+      tag: "Mobile",
+      duration: "4h00min",
+      lessons: 30,
     },
     {
-      title: "Node.js Masterclass",
-      tag: "Backend",
-      duration: "4h10min",
-      lessons: 32,
+      title: "Kotlin for Android Development",
+      tag: "Mobile",
+      duration: "3h50min",
+      lessons: 26,
     },
   ];
 

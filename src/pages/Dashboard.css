@@ -106,13 +106,17 @@
   width: 100%;
 }
 .profile-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #7bdff2;
+  width: 50px;
+  height: 50px;
+ 
   border: 1px solid #333;
   border-radius: 50%;
   position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer;
+}
+.profile-logo{
+  width: 80px;
+  height: 80px;
 }
