@@ -1,6 +1,6 @@
 .hamburger {
   position: absolute;
-  top: 29px;
+  top: 33px;
  
   font-size: 26px;
   background: none;
@@ -16,4 +16,13 @@
   flex: 1;
   margin-left: 0;
   padding: 20px;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
