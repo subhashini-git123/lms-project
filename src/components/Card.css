@@ -128,3 +128,6 @@
 .card-carousel::-webkit-scrollbar {
   display: none;
 }
+.card-title {
+  color: black;
+}

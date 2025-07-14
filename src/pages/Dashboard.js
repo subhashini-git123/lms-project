@@ -3,17 +3,20 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import SearchBar from "../components/SearchBar";
 import Card from "../components/Card";
-import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
+import profile from "../assets/profile.png";
+
+import {
+  IoArrowBackCircleOutline,
+  IoArrowForwardCircleOutline,
+} from "react-icons/io5";
 import { useCourses } from "../pages/CourseContext";
 import "./Dashboard.css";
 
 const Dashboard = () => {
   const [showProfile, setShowProfile] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
-
-
-  
   const continueRef = useRef(null);
   const suggestedRef = useRef(null);
 
@@ -33,26 +36,36 @@ const Dashboard = () => {
     }
   };
 
-  const handlePlay = (title) => {
-    alert(`Continuing the course: ${title}`);
-  };
+  const normalizedQuery = searchQuery.toLowerCase();
+
+  const filteredContinue = continueCourses.filter((course) =>
+    course.title?.toLowerCase().includes(normalizedQuery)
+  );
+
+  const filteredSuggested = suggestedCourses.filter((course) =>
+    course.title.toLowerCase().includes(normalizedQuery)
+  );
 
   return (
     <div className="dashboard-container">
       <Sidebar />
       <div className="main-content">
-        <SearchBar />
-        <div className="profile-icon" onClick={() => setShowProfile(true)}></div>
-
+        <SearchBar value={searchQuery} onChange={setSearchQuery} />
+           <img src={profile} alt="profile" className="profile-icon" onClick={() => setShowProfile(true)}/>
         {showProfile && (
           <div className="profile-slideout open">
-            <button className="close-btn" onClick={() => setShowProfile(false)}>&times;</button>
+            
+            <button className="close-btn" onClick={() => setShowProfile(false)}>
+              &times;
+            </button>
             <div className="slideout-content">
-              <div className="profile-circle large"></div>
+             <img src={profile} alt="profile" className="profile-logo" />
               <p className="profile-name">John Doe</p>
               <p>Junior</p>
               <p>Software Developer</p>
-              <button className="profile-btn" onClick={handleProfile}>Edit Profile</button>
+              <button className="profile-btn" onClick={handleProfile}>
+                Edit Profile
+              </button>
               <button className="profile-btn logout">Logout</button>
             </div>
           </div>
@@ -94,16 +107,20 @@ const Dashboard = () => {
         </div>
 
         <div className="card-carousel" ref={continueRef}>
-          {continueCourses.map((course, idx) => (
-            <Card
-              key={idx}
-              courseTitle={course.title}
-              tag={course.tag}
-              timeLeft={course.duration}
-              progress={course.progress}
-              onPlay={() => handlePlay(course.title)}
-            />
-          ))}
+          {filteredContinue.length > 0 ? (
+            filteredContinue.map((course, idx) => (
+              <Card
+                key={idx}
+                courseId={idx}
+                courseTitle={course.title}
+                tag={course.tag}
+                timeLeft={course.duration}
+                progress={course.progress}
+              />
+            ))
+          ) : (
+            <p className="no-results">No matching courses found.</p>
+          )}
         </div>
 
         <div className="section-header">
@@ -119,15 +136,20 @@ const Dashboard = () => {
         </div>
 
         <div className="card-carousel" ref={suggestedRef}>
-          {suggestedCourses.map((course, idx) => (
-            <Card
-              key={idx}
-              title={course.title}
-              tag={course.tag}
-              duration={course.duration}
-              lessons={course.lessons}
-            />
-          ))}
+          {filteredSuggested.length > 0 ? (
+            filteredSuggested.map((course, idx) => (
+              <Card
+                key={idx}
+                courseId={idx}
+                title={course.title}
+                tag={course.tag}
+                duration={course.duration}
+                lessons={course.lessons}
+              />
+            ))
+          ) : (
+            <p className="no-results">No matching courses found.</p>
+          )}
         </div>
       </div>
     </div>
@@ -135,9 +157,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-   
-
-
-
-
-

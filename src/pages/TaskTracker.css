@@ -1,7 +1,6 @@
 .task-tracker {
   padding: 2rem;
-  width: 69rem;
-  margin-left: 300px;
+  width: 85rem;
 }
 
 .trainee-card {
@@ -79,8 +78,8 @@
 }
 .tracker-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 45px;
-  padding: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 30px;
   box-sizing: border-box;
 }
