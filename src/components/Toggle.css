@@ -1,0 +1,19 @@
+.hamburger {
+  position: absolute;
+  top: 29px;
+ 
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-layout {
+  display: flex;
+}
+
+.toggle-content {
+  flex: 1;
+  margin-left: 0;
+  padding: 20px;
+}
