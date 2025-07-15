@@ -185,6 +185,9 @@ const Dashboard = () => {
   const handleProfile = () => {
     navigate("/profile");
   };
+  const handleLogout = () => {
+      navigate("/");
+  }
 
   const scroll = (ref, direction) => {
     if (ref.current) {
@@ -230,7 +233,7 @@ const Dashboard = () => {
               <button className="profile-btn" onClick={handleProfile}>
                 Edit Profile
               </button>
-              <button className="profile-btn logout">Logout</button>
+              <button className="profile-btn logout" onClick={handleLogout}>Logout</button>
             </div>
           </div>
         )}
