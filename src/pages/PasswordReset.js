@@ -7,7 +7,7 @@ function PasswordReset() {
 
   const handleContinue = () => {
    
-    navigate("/card");
+    navigate("/dashboard");
   };
 
   return (
