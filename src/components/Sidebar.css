@@ -53,9 +53,7 @@
     border: none;
     background-color: transparent;
 }
-/* .sidebar-heading :hover{
-  background-color: transparent;
-} */
+
 .active-li {
   background-color: #b3e0ef;
   border-radius: 6px;

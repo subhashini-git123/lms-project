@@ -19,7 +19,10 @@
   padding: 0 !important;
   width: 14.28%;
 }
-
+.p-datepicker-other-month{
+    background-color: #808080b3; 
+ border-radius: 6px; 
+}
 .p-datepicker table td span {
   display: block;
   width: 100%;
@@ -40,6 +43,7 @@
   background-color: #f0f0f0;
   cursor: default;
 }
+
 
 .red-dot {
   width: 6px;
@@ -136,4 +140,10 @@
 
 .due-date {
   color: #666;
+}
+
+.p-datepicker-today > span {
+  font-weight: bold;
+  color: red;
+  
 }
