@@ -57,6 +57,7 @@ const Register = () => {
 
         <label>Username</label>
         <input
+        placeholder="Enter your username"
           name="username"
           value={form.username}
           onChange={handleChange}
@@ -65,6 +66,7 @@ const Register = () => {
 
         <label>Email</label>
         <input
+          placeholder="Enater your email"
           name="email"
           type="email"
           value={form.email}
@@ -74,6 +76,7 @@ const Register = () => {
 
         <label>Password</label>
         <input
+          placeholder="Enter your password"
           name="password"
           type="password"
           value={form.password}
