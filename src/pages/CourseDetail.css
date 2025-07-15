@@ -7,7 +7,7 @@
 
 .course-header {
   background-color: #A5D7FF;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
 }
 
@@ -31,9 +31,9 @@
 
 .course-body {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: flex-start;
+ 
+  gap: 100px;
+  
 }
 
 .course-tabs {
@@ -41,7 +41,10 @@
   border-radius: 8px;
   padding: 16px;
   background-color: #fff;
-  flex: 2;
+  /* flex: 3 1; */
+  width: 50rem;
+      margin-left: 60px;
+    margin-top: -16px;
 }
 
 .tabs {
@@ -85,12 +88,13 @@
 }
 
 .course-sidebar {
-  flex: 1;
+ width: 20rem;
   background-color: white;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
   min-width: 220px;
+      margin-top: -5rem;
 }
 
 .thumbnail {
@@ -133,7 +137,8 @@
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 15px;
+  margin-top: 15;
+
 }
 
 .course-info-list {
