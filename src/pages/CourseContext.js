@@ -9,10 +9,7 @@ export const CourseProvider = ({ children }) => {
       tag: "Frontend",
       duration: "3h20min",
       progress: 70,
-        title: "HTML and CSS Basics to Advanced Complete Course",
-      tag: "Frontend",
-      duration: "2hrs",
-      progress: 45,
+   
     },
     {
       title: "Python for Beginners",
