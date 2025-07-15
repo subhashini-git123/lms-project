@@ -49,8 +49,13 @@
   font-size: 1.2rem;
   text-decoration: none;
   color: black;
+      width: 110%;
+    border: none;
+    background-color: transparent;
 }
-
+/* .sidebar-heading :hover{
+  background-color: transparent;
+} */
 .active-li {
   background-color: #b3e0ef;
   border-radius: 6px;
@@ -59,6 +64,7 @@
 .active-settings-text {
   color: #007bff;
   font-weight: bold;
+  
 }
 
 .sidebar ul li.bottom {
