@@ -129,3 +129,12 @@
 .card-title {
   color: black;
 }
+.book-icon{
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.clock-icon{
+  margin-right: 6px;
+
+  vertical-align: middle;  
+}

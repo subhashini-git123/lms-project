@@ -1,10 +1,10 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Card.css";
 import { IoPlayOutline } from "react-icons/io5";
 import { FiClock } from "react-icons/fi";
-import { PiBookOpenTextLight } from "react-icons/pi";
-
+import { BsBook } from "react-icons/bs";
 const Card = ({
   courseTitle,
   tag,
@@ -54,11 +54,11 @@ const Card = ({
     <h3 className="card-title">{title}</h3>
     <div className="card-footer space-between">
       <span>
-        <PiBookOpenTextLight style={{ marginRight: "6px", verticalAlign: "middle" }} />
+        <BsBook   className="book-icon" />
         {lessons} Lessons
       </span>
       <span>
-        <FiClock style={{ marginRight: "6px", verticalAlign: "middle" }} />
+        <FiClock className="clock-icon" />
         {duration}
       </span>
     </div>
