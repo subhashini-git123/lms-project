@@ -8,11 +8,18 @@ const Chat = () => {
     { sender: "manager", text: "................................" },
   ]);
   const [input, setInput] = useState("");
+  const [isUserNext, setIsUserNext] = useState(true); 
 
   const handleSend = () => {
     if (input.trim()) {
-      setMessages([...messages, { sender: "user", text: input }]);
+      const newMessage = {
+        sender: isUserNext ? "user" : "manager",
+        text: input,
+      };
+
+      setMessages([...messages, newMessage]);
       setInput("");
+      setIsUserNext(!isUserNext); 
     }
   };
 
