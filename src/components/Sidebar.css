@@ -7,7 +7,10 @@
   top: 0;
   background-color: #f0f0f0;
   box-sizing: border-box;
-  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .close-sidebar-btn {
@@ -27,11 +30,31 @@
   text-align: center;
 }
 
+.sidebar-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #7bdff2;
+  border: 1px solid #333;
+  margin: 0 auto 1rem;
+}
+
 .sidebar ul {
   list-style: none;
   padding: 0;
-  text-align: center;
   margin: 0;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .sidebar ul li {
@@ -49,9 +72,9 @@
   font-size: 1.2rem;
   text-decoration: none;
   color: black;
-      width: 110%;
-    border: none;
-    background-color: transparent;
+  width: 100%;
+  border: none;
+  background-color: transparent;
 }
 
 .active-li {
@@ -62,27 +85,10 @@
 .active-settings-text {
   color: #007bff;
   font-weight: bold;
-  
 }
 
 .sidebar ul li.bottom {
-  position: absolute;
-  bottom: 10px;
-  width: 70%;
-  left: 15%;
-}
-
-.logo-circle {
-  width: 40px;
-  height: 40px;
-  background-color: #7bdff2;
-  border: 1px solid #333;
-  margin: 0 auto 1rem;
-}
-.sidebar-logo {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 1rem;
+  margin-top: auto;
+  padding: 12px 16px;
+ 
 }
