@@ -5,8 +5,8 @@ const CourseContext = createContext();
 export const CourseProvider = ({ children }) => {
   const continueCourses = [
     {
-      id: "react-beginners",
-      title: "ReactJs for Beginners",
+      id: "HTML and CSS Basics to Advanced Complete Course",
+      title: "HTML and CSS Basics to Advanced Complete Course",
       tag: "Frontend",
       duration: "3h20min",
       progress: 70,
@@ -43,8 +43,8 @@ export const CourseProvider = ({ children }) => {
 
   const suggestedCourses = [
     {
-      id: "react-fundamentals",
-      title: "React Fundamentals",
+      id: "HTML and CSS Basics to Advanced Complete Course",
+      title: "HTML and CSS Basics to Advanced Complete Course",
       tag: "Frontend",
       duration: "3hrs",
       lessons: 24,
