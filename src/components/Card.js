@@ -29,6 +29,8 @@ const Card = ({
           <>
             <div className="card-tag">{tag}</div>
             <h3 className="card-title">{courseTitle}</h3>
+
+
             {progress !== undefined && (
               <div className="card-progress-bar">
                 <div className="card-progress" style={{ width: `${progress}%` }}></div>
@@ -53,11 +55,12 @@ const Card = ({
     <div className="card-tag">{tag}</div>
     <h3 className="card-title">{title}</h3>
     <div className="card-footer space-between">
-      <span>
+      <span className="card-time">
         <BsBook   className="book-icon" />
         {lessons} Lessons
+           
       </span>
-      <span>
+      <span className="card-time">
         <FiClock className="clock-icon" />
         {duration}
       </span>
