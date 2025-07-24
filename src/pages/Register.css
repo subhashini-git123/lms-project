@@ -13,6 +13,11 @@
   font-size: 16px;
   margin-top: 15px;
 }
+ .form h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
 .register-container input {
   width: 100%;
   padding: 10px;
@@ -61,5 +66,59 @@
 .error {
   color: red;
   font-size: 13px;
+}
+@media (max-width: 575px) {
+  .register-container {
+    width: 90%;
+    margin: 30px auto;
+    padding: 16px 12px;
+  }
+
+  .register-container label {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+
+  .register-container input,
+  .register-container select {
+    font-size: 12px;
+    padding: 5px;
+    margin-bottom: 0;
+  }
+
+  .form {
+    gap: 8px;
+  }
+
+  .input {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .button {
+        font-size: 14px;
+        padding: 4px 0px;
+        width: 100%;
+        margin-top: 5px;
+  }
+
+  .error {
+    font-size: 12px;
+  }
+
+  .register-link {
+    font-size: 14px;
+  }
+
+  .form h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .form p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+  }
 }
 

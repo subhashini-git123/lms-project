@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-import "./Register.css"
+import "./Register.css";
 const Register = () => {
   const [form, setForm] = useState({
     username: "",
@@ -57,7 +57,7 @@ const Register = () => {
 
         <label>Username</label>
         <input
-        placeholder="Enter your username"
+          placeholder="Enter your username"
           name="username"
           value={form.username}
           onChange={handleChange}
@@ -107,20 +107,16 @@ const Register = () => {
         <button type="submit" className="button">
           Register
         </button>
-       
+
         <p>
-       Already have an account? 
-        <Link to="/" className="register-link">
-          Login
-        </Link>
-      </p>
- 
+          Already have an account?
+          <Link to="/" className="register-link">
+            Login
+          </Link>
+        </p>
       </form>
     </div>
   );
 };
 
 export default Register;
-
-
-
