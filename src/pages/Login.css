@@ -1,7 +1,7 @@
-.login-container {
-  width: 350px;
+  .login-container {
+  width: 350px; 
   margin: 100px auto;
-  padding: 30px 25px;
+   padding: 30px 25px; 
   border: 2px solid #333;
   border-radius: 15px;
   background-color: #f9f9f9;
@@ -75,4 +75,53 @@
   font-weight: bold;
   color: #3742fa;
   text-decoration: none;
+}
+
+@media (max-width: 575px) {
+  .login-container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px 15px;
+  }
+
+  .login-container h2 {
+    font-size: 22px;
+  }
+
+  .login-container label {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .login-container input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .login-button {
+    width: 100%;
+    padding: 8px;
+    font-size: 13px;
+    margin: 8px auto 0;
+  }
+
+  .error-text {
+    font-size: 12px;
+  }
+
+  .forgot-password a {
+    font-size: 13px;
+  }
+
+  .login-container p {
+    font-size: 14px;
+  }
+
+  .register-link {
+    font-size: 14px;
+  }
+  .forgot-password {
+  text-align: right;
+  margin: 3px 0;
+}
 }

@@ -68,3 +68,42 @@
 .back-login:hover {
   text-decoration: underline;
 }
+@media (max-width: 575px) {
+  .check-email-container {
+    width: 90%;
+    padding: 30px 20px;
+    margin: 60px auto;
+    border-radius: 15px;
+  }
+
+  .email-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 16px;
+  }
+
+  .email-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .email-subtitle {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .open-app-button {
+    width: 50%;
+    font-size: 15px;
+    padding: 7px;
+  }
+
+  .resend-text,
+  .back-to-login {
+    font-size: 12px;
+  }
+
+  .click-link {
+    font-size: 12.5px;
+  }
+}
