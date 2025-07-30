@@ -273,7 +273,16 @@
     height: 4rem;
   }
 }
-
+@media (min-width: 768px){
+.profile-icon {
+    position: fixed;
+    top:6px;
+    right: 15px;
+    width: 39px;
+    height: 39px;
+    z-index: 1001;
+  }
+}
 @media (max-width: 768px) {
   .main-content {
     margin-left: 0;
@@ -313,6 +322,7 @@
     padding: 10px;
   }
 }
+
 
 @media (max-width: 480px) {
   .stat-box {
