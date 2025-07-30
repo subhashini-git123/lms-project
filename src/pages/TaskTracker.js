@@ -5,6 +5,7 @@ import "./TaskTracker.css";
 import { IoPersonSharp } from "react-icons/io5";
 import Card from "../components/Card";
 import Toggle from "../components/Toggle";
+import Sidebar from '../components/Sidebar'
 const TaskTracker = () => {
   const { continueCourses, suggestedCourses } = useCourses(); 
   const [activeTab, setActiveTab] = useState("completed","inprogress");   
@@ -14,7 +15,8 @@ const TaskTracker = () => {
  
       {/* Trainee Info */}
       <div className="trainee-card">
-       <Toggle/>
+       {/* <Toggle/> */}
+       <Sidebar/>
         <div>
           <IoPersonSharp className="trainee-photo" />
         </div>
