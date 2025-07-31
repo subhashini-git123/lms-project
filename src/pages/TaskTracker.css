@@ -126,8 +126,11 @@ margin-left: 25px;
   cursor: pointer;
   padding: 8px 12px;
   font-weight: bold;
+    /* user-select: none; */
 }
-
+/* .tab:focus {
+  outline: none;
+} */
 .tab.active {
   font-weight: bold;
   color: #000;
@@ -170,6 +173,7 @@ margin-bottom: 20px;
 margin-left: 25px;
     flex-wrap: wrap;
     gap: 20px;
+      /* min-height: 300px; */
     
 }
 @media only screen and (max-width: 575px) {
@@ -196,7 +200,9 @@ margin-left: 25px;
   .trainee-info p {
     font-size: 14px;
   }
-
+  .toggle-container {
+    display: block;
+  }
   .tabs {
     flex-direction: column;
     font-size: 14px;
@@ -324,3 +330,73 @@ margin-left: 25px;
     gap: 20px;
   }
 }
+/* Small devices (min-width: 576px) */
+@media (min-width: 576px) {
+  .trainee-card {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .trainee-photo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+
+  .tab {
+    font-size: 15px;
+  }
+
+  .tracker-container {
+    justify-content: center;
+    margin-left: 15px;
+  }
+}
+
+/* Medium devices (min-width: 768px) */
+@media (min-width: 768px) {
+  .trainee-photo {
+    width: 180px;
+    height: 180px;
+    margin-right: 3rem;
+  }
+
+  .tabs {
+    font-size: 16px;
+  }
+
+  .tracker-container {
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+/* Large devices (min-width: 992px) */
+@media (min-width: 992px) {
+  .task-tracker {
+    padding: 3rem;
+  }
+
+  .trainee-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .tabs {
+    font-size: 17px;
+  }
+
+  .tracker-container {
+    margin-left: 25px;
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+

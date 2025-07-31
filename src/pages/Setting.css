@@ -1,4 +1,4 @@
-.settings-page-div {
+/* .settings-page-div {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -77,95 +77,27 @@
 .update-btn:hover {
   background-color: #3aaabf;
 }
-/* Sidebar wrapper and hamburger styling */
-.hamburger-btn {
-  display: none;
-  font-size: 24px;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1000;
-}
 
-.sidebar-wrapper {
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Responsive Styles */
-@media (max-width: 575px) {
-  .hamburger-btn {
-    display: block;
-  }
-.form-left label,
-.form-right label {
-  margin-bottom: 5px;
-  font-size: 14px;
-}
-  .sidebar-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: white;
-    width: 250px;
-    transform: translateX(-100%);
-    z-index: 999;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .sidebar-wrapper.open {
-    transform: translateX(0);
-  }
-
+ */
+/* Small devices (phones, less than 576px) */
+@media only screen and (max-width: 575px) {
   .settings-page-div {
-    margin-left: 0;
-    padding: 20px;
-  }
-
-  .form-group {
-    flex-direction: column;
-    gap: 0;
-    margin-left: 0;
-  }
-
-  .form-left input,
-  .form-right input {
-    width: 100%;
-  }
-
-  .settings-title {
-    margin-right: 0;
-    text-align: center;
-  }
-
-  .change-password-form {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .settings-page-div {
-    margin-left: 0;
     padding-top: 20px;
+    margin-left: 0;
+    align-items: flex-start;
   }
 
   .settings-title {
-    font-size: 20px;
-    /* margin-right: 0;
-    text-align: center; */
+    font-size: 22px;
+    margin-right: 0;
+    margin-left: 1rem;
+    text-align: left;
   }
 
   .change-password-form {
-    width: 100%;
-    /* margin-left: 0; */
+    width: 90%;
+    margin-left: 1rem;
     padding: 20px;
-  }
-
-  .form-title {
-    font-size: 18px;
-    margin-bottom: 8px;
   }
 
   .form-group {
@@ -177,13 +109,77 @@
   .form-left input,
   .form-right input {
     width: 100%;
-    padding: 14px 12px;
-    margin-bottom: 0;
   }
 
   .update-btn {
     width: 100%;
-    padding: 9px;
-    font-size: 13px;
+  }
+}
+
+/* Medium devices (≥576px) */
+@media (min-width: 576px) {
+  .change-password-form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 0;
+  }
+
+  .form-left input,
+  .form-right input {
+    width: 100%;
+  }
+
+  .update-btn {
+    width: 50%;
+  }
+}
+
+/* Large devices (≥768px) */
+@media (min-width: 768px) {
+  .change-password-form {
+    width: 75%;
+  }
+
+  .form-group {
+    flex-direction: row;
+    gap: 100px;
+    margin-left: 2rem;
+  }
+
+  .form-left input,
+  .form-right input {
+    width: 14rem;
+  }
+
+  .update-btn {
+    width: 8rem;
+  }
+}
+
+/* Extra large devices (≥992px) */
+@media (min-width: 992px) {
+  .change-password-form {
+    width: 60rem;
+    margin-left: 150px;
+  }
+
+  .form-group {
+    gap: 150px;
+    margin-left: 4rem;
+  }
+
+  .form-left input,
+  .form-right input {
+    width: 16rem;
+  }
+
+  .update-btn {
+    width: 7rem;
   }
 }

@@ -42,7 +42,7 @@
   font-size: 0.65rem;
   color: #666;
 } */
-.courses-container {
+/* .courses-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -85,6 +85,105 @@
   justify-content: space-between;
   font-size: 0.65rem;
   color: #666;
+} */
+/* Extra Small Devices (phones, less than 576px) */
+@media only screen and (max-width: 575px) {
+  .courses-container {
+    
+        display: flex;
+    flex-direction: column;
+    align-items: center; /* Center cards horizontally */
+    gap: 16px; /* Add space between cards */
+    padding: 10px;
+  }
+
+  .course-card {
+    font-size: 0.8rem;
+    min-height: 120px;
+  }
+
+  .course-thumbnail {
+    height: 60px;
+  }
+
+  .course-info h4 {
+    font-size: 0.85rem;
+  }
+
+  .course-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.7rem;
+    gap: 2px;
+  }
+}
+
+/* Small Devices (≥576px) */
+@media (min-width: 576px) {
+  .courses-container {
+      display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  }
+
+  .course-thumbnail {
+    height: 60px;
+  }
+
+  .course-info h4 {
+    font-size: 0.8rem;
+  }
+
+  .course-meta {
+    font-size: 0.7rem;
+  }
+}
+
+/* Medium Devices (≥768px) */
+@media (min-width: 768px) {
+  .courses-container {
+    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+    gap: 20px;
+  }
+
+  .course-thumbnail {
+    height: 50px;
+  }
+
+  .course-info h4 {
+    font-size: 0.75rem;
+  }
+
+  .course-meta {
+    font-size: 0.65rem;
+  }
+}
+
+/* Large Devices (≥992px) */
+@media (min-width: 992px) {
+  .courses-container {
+      display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  
+  }
+
+  .course-thumbnail {
+    height: 50px;
+  }
+
+  .course-info h4 {
+    font-size: 0.8rem;
+  }
+
+  .course-meta {
+    font-size: 0.7rem;
+  }
 }
 
 @media only screen and (max-width: 575px) {

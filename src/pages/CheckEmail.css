@@ -1,4 +1,4 @@
-.check-email-container {
+/* .check-email-container {
   background-color: white;
   border: 2px solid #000;
   border-radius: 20px;
@@ -67,8 +67,8 @@
 }
 .back-login:hover {
   text-decoration: underline;
-}
-@media (max-width: 575px) {
+} */
+/* @media (max-width: 575px) {
   .check-email-container {
     width: 90%;
     padding: 30px 20px;
@@ -106,4 +106,122 @@
   .click-link {
     font-size: 12.5px;
   }
+} */
+/* Small devices (phones, less than 576px) */
+.check-email-container {
+  background-color: #f9f9f9;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 80px auto;
 }
+
+.email-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #7bdff2;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  border: 2px solid #333;
+}
+
+.email-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #222;
+}
+
+.email-subtitle {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.email-address {
+  font-weight: bold;
+}
+
+.open-app-button {
+  padding: 10px 20px;
+  background-color: #a3e4f2;
+  color: #004c66;
+  font-size: 1rem;
+  border: 2px solid #4db8cc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.resend-text {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.click-link {
+  font-weight: bold;
+  cursor: pointer;
+  color: #3742fa;
+}
+
+.back-to-login {
+  font-size: 13px;
+  color: #3742fa;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-login:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* XS (≤575px) */
+@media only screen and (max-width: 575px) {
+  .check-email-container {
+    width: 90%;
+    padding: 20px 15px;
+    margin: 40px auto;
+  }
+
+  .email-title {
+    font-size: 20px;
+  }
+
+  .email-subtitle {
+    font-size: 13px;
+  }
+
+  .open-app-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* SM (≥576px) */
+@media (min-width: 576px) {
+  .check-email-container {
+    width: 360px;
+  }
+}
+
+/* MD (≥768px) */
+@media (min-width: 768px) {
+  .check-email-container {
+    width: 380px;
+  }
+}
+
+/* LG (≥992px) */
+@media (min-width: 992px) {
+  .check-email-container {
+    width: 400px;
+  }
+}
+
