@@ -1,3 +1,90 @@
+/* .task-tracker {
+  padding: 2rem;
+
+}
+
+.trainee-card {
+  display: flex;
+  align-items: center;
+  background: #a5d7ff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.trainee-photo {
+  width: 200px;
+  height: 200px;
+  margin-right: 5rem;
+  color: #aab4b4;
+  background-color: #e1e6e6;
+}
+
+.trainee-info h2 {
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  gap: 20px;
+}
+
+.tab {
+  cursor: pointer;
+  color: #555;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-weight: bold;
+}
+
+.tab.active {
+  font-weight: bold;
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+.tab:hover {
+  background-color: #d6e9f8;
+}
+
+.layout-border {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.course-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail {
+  height: 100px;
+  background-color: #eef;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.tracker-container {
+  display: flex;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: 25px;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+} */
 .task-tracker {
   padding: 2rem;
 
@@ -89,65 +176,158 @@ margin-left: 25px;
       /* min-height: 300px; */
     
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .task-tracker {
     padding: 1rem;
   }
 
   .trainee-card {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
     padding: 1rem;
-    margin-bottom: 1rem;
   }
 
   .trainee-photo {
-    width: 120px;
-    height: 120px;
-    margin-right: 0;
-    margin-bottom: 1rem;
+    width: 80px;
+    height: 80px;
+    margin: 0 0 1rem 0;
+  }
+
+  .trainee-info h2 {
+    font-size: 16px;
+  }
+
+  .trainee-info p {
+    font-size: 14px;
   }
   .toggle-container {
     display: block;
   }
   .tabs {
     flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
     font-size: 14px;
+    gap: 10px;
   }
 
   .tab {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .layout-border {
-    border: none;
-    border-radius: 0;
+    font-size: 14px;
   }
 
   .tracker-container {
     flex-direction: column;
-    align-items: center;
-    margin: 10px 0;
-    gap: 15px;
-  }
-
-  .course-grid {
-    grid-template-columns: 1fr;
+    margin-left: 0;
+    gap: 1rem;
   }
 
   .course-card {
-    width: 90%;
-    padding: 1rem;
+    padding: 0.75rem;
+    font-size: 12px;
   }
 
-  .thumbnail {
-    height: 80px;
-    
+  .course-card h4 {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .trainee-photo {
+    width: 100px;
+    height: 100px;
+    margin-right: 2rem;
+  }
+
+  .trainee-info h2 {
+    font-size: 18px;
+  }
+
+  .trainee-info p {
+    font-size: 14px;
+  }
+
+  .tabs {
+    font-size: 15px;
+  }
+
+  .tab {
+    font-size: 15px;
+  }
+
+  .tracker-container {
+    margin-left: 10px;
+    gap: 16px;
+  }
+
+  .course-card {
+    font-size: 13px;
+  }
+
+  .course-card h4 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .trainee-photo {
+    width: 130px;
+    height: 130px;
+    margin-right: 3rem;
+  }
+
+  .trainee-info h2 {
+    font-size: 20px;
+  }
+
+  .trainee-info p {
+    font-size: 15px;
+  }
+
+  .tab {
+    font-size: 15px;
+  }
+
+  .course-card {
+    font-size: 14px;
+  }
+
+  .course-card h4 {
+    font-size: 16px;
+  }
+
+  .tracker-container {
+    margin-left: 15px;
+    gap: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  .trainee-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .trainee-info h2 {
+    font-size: 22px;
+  }
+
+  .trainee-info p {
+    font-size: 16px;
+  }
+
+  .tab {
+    font-size: 16px;
+  }
+
+  .course-card {
+    font-size: 15px;
+  }
+
+  .course-card h4 {
+    font-size: 17px;
+  }
+
+  .tracker-container {
+    margin-left: 25px;
+    gap: 20px;
   }
 }
 /* Small devices (min-width: 576px) */
