@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useCourses } from "./CourseContext";
 import "./CourseDetail.css";
@@ -7,13 +7,21 @@ import { GoBook } from "react-icons/go";
 import { RxClock } from "react-icons/rx";
 import { BsWatch, BsSliders } from "react-icons/bs";
 import Toggle from "../components/Toggle";
+import Sidebar from "../components/Sidebar";
 
 const CourseDetail = () => {
   const { id } = useParams();
   const { suggestedCourses, continueCourses } = useCourses();
   const [activeTab, setActiveTab] = useState("overview");
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 992);
 
-  // Find the course by ID from either list
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth > 992);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const course =
     suggestedCourses.find((c) => c.id === id) ||
     continueCourses.find((c) => c.id === id);
@@ -29,7 +37,7 @@ const CourseDetail = () => {
   return (
     <div className="course-detail-container">
       <div className="course-header">
-        <Toggle />
+        {isDesktop ? <Toggle /> : <Sidebar />}
         <h2>{course.title}</h2>
         <p className="subtitle">
           Master {course.title} to create Web Applications & go from basic to advanced
