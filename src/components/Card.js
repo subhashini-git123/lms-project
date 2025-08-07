@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Card.css";
@@ -21,7 +20,11 @@ const Card = ({
   const coursePath = courseId ? `/courses/${courseId}` : "#";
 
   return (
-    <Link to={coursePath} className="card-link" style={{ textDecoration: "none", color:"gray" }}>
+    <Link
+      to={coursePath}
+      className="card-link"
+      style={{ textDecoration: "none", color: "gray" }}
+    >
       <div className="card">
         <div className="card-banner" />
 
@@ -30,10 +33,12 @@ const Card = ({
             <div className="card-tag">{tag}</div>
             <h3 className="card-title">{courseTitle}</h3>
 
-
             {progress !== undefined && (
               <div className="card-progress-bar">
-                <div className="card-progress" style={{ width: `${progress}%` }}></div>
+                <div
+                  className="card-progress"
+                  style={{ width: `${progress}%` }}
+                ></div>
               </div>
             )}
             {!hideFooter && (
@@ -50,24 +55,22 @@ const Card = ({
           </>
         )}
 
-       {isSuggestedCourse && (
-  <>
-    <div className="card-tag">{tag}</div>
-    <h3 className="card-title">{title}</h3>
-    <div className="card-footer space-between">
-      <span className="card-time">
-        <BsBook   className="book-icon" />
-        {lessons} Lessons
-           
-      </span>
-      <span className="card-time">
-        <FiClock className="clock-icon" />
-        {duration}
-      </span>
-    </div>
-  </>
-)}
-
+        {isSuggestedCourse && (
+          <>
+            <div className="card-tag">{tag}</div>
+            <h3 className="card-title">{title}</h3>
+            <div className="card-footer space-between">
+              <span className="card-time">
+                <BsBook className="book-icon" />
+                {lessons} Lessons
+              </span>
+              <span className="card-time">
+                <FiClock className="clock-icon" />
+                {duration}
+              </span>
+            </div>
+          </>
+        )}
       </div>
     </Link>
   );

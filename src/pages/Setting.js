@@ -44,11 +44,10 @@ const Setting = () => {
       return;
     }
 
-    // Success
     setMessage("Password updated successfully!");
     setError("");
     console.log("Password update form submitted:", formData);
-    // Optionally reset form
+
     setFormData({
       email: "",
       currentPassword: "",
@@ -59,54 +58,54 @@ const Setting = () => {
 
   return (
     <div className="settings-container">
-        <Sidebar/>
-    <div className="settings-page-div">
-      <h2 className="settings-title">Settings</h2>
-      <form className="change-password-form" onSubmit={handleSubmit}>
-        <h3 className="form-title">Change Password</h3>
+      <Sidebar />
+      <div className="settings-page-div">
+        <h2 className="settings-title">Settings</h2>
+        <form className="change-password-form" onSubmit={handleSubmit}>
+          <h3 className="form-title">Change Password</h3>
 
-        {error && <p className="error-text">{error}</p>}
-        {message && <p className="success-text">{message}</p>}
+          {error && <p className="error-text">{error}</p>}
+          {message && <p className="success-text">{message}</p>}
 
-        <div className="form-group">
-          <div className="form-left">
-            <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            <label>New Password</label>
-            <input
-              type="password"
-              name="newPassword"
-              value={formData.newPassword}
-              onChange={handleChange}
-            />
+          <div className="form-group">
+            <div className="form-left">
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <label>New Password</label>
+              <input
+                type="password"
+                name="newPassword"
+                value={formData.newPassword}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-right">
+              <label>Current Password</label>
+              <input
+                type="password"
+                name="currentPassword"
+                value={formData.currentPassword}
+                onChange={handleChange}
+              />
+              <label>Confirm Password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+              />
+            </div>
           </div>
-          <div className="form-right">
-            <label>Current Password</label>
-            <input
-              type="password"
-              name="currentPassword"
-              value={formData.currentPassword}
-              onChange={handleChange}
-            />
-            <label>Confirm Password</label>
-            <input
-              type="password"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-            />
-          </div>
-        </div>
-        <button type="submit" className="update-btn">
-          Update
-        </button>
-      </form>
-    </div>
+          <button type="submit" className="update-btn">
+            Update
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

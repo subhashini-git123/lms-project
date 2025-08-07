@@ -60,53 +60,50 @@ const Profile = () => {
           style={{ display: "none" }}
         />
       </div>
-    <form className="profile-form" onSubmit={handleSubmit}>
-  <div className="form-columns">
-    {/* Left Column */}
-    <div className="form-column">
-      <label>Name</label>
-      <input
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-      />
+      <form className="profile-form" onSubmit={handleSubmit}>
+        <div className="form-columns">
+          <div className="form-column">
+            <label>Name</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
 
-      <label>Designation/Role</label>
-      <input
-        type="text"
-        name="designation"
-        value={formData.designation}
-        onChange={handleChange}
-      />
-    </div>
+            <label>Designation/Role</label>
+            <input
+              type="text"
+              name="designation"
+              value={formData.designation}
+              onChange={handleChange}
+            />
+          </div>
 
-    {/* Right Column */}
-    <div className="form-column">
-      <label>Department</label>
-      <input
-        type="text"
-        name="department1"
-        value={formData.department1}
-        onChange={handleChange}
-      />
+          {/* Right Column */}
+          <div className="form-column">
+            <label>Department</label>
+            <input
+              type="text"
+              name="department1"
+              value={formData.department1}
+              onChange={handleChange}
+            />
 
-      <label>Department</label>
-      <input
-        type="text"
-        name="department2"
-        value={formData.department2}
-        onChange={handleChange}
-      />
-    </div>
-  </div>
+            <label>Department</label>
+            <input
+              type="text"
+              name="department2"
+              value={formData.department2}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
 
-  <button type="submit" className="submit-btn">
-    Submit
-  </button>
-</form>
-
-
+        <button type="submit" className="submit-btn">
+          Submit
+        </button>
+      </form>
     </div>
   );
 };

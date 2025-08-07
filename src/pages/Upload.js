@@ -90,9 +90,8 @@ const Upload = () => {
               <input type="text" placeholder="Section Title" />
               <input type="text" placeholder="Section Duration" />
               <input type="text" placeholder="Section course" />
-            
             </div>
-              <button className="add-button">Add Section</button>
+            <button className="add-button">Add Section</button>
           </div>
         </div>
 

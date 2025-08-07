@@ -1,22 +1,22 @@
- /* .register-container{
+.register-container {
   width: 340px;
   margin: 60px auto;
-  padding: 20px 16px; 
+  padding: 20px 16px;
   border: 2px solid #333;
   border-radius: 12px;
   background-color: #f9f9f9;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.08);
 }
-.register-container label{
-    display: block;
+.register-container label {
+  display: block;
   margin-bottom: 5px;
   font-size: 16px;
   margin-top: 15px;
 }
- .form h2 {
-    font-size: 26px;
-    text-align: center;
-  }
+.form h2 {
+  font-size: 26px;
+  text-align: center;
+}
 
 .register-container input {
   width: 100%;
@@ -42,139 +42,14 @@
 }
 
 .input {
-  padding: 8px; 
+  padding: 8px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  
 }
 
 .button {
-  padding: 8px 16px; 
-  background-color: #a3e4f2;
-  color: #004c66;
-  font-size: 0.95rem;
-  border: 2px solid #4db8cc;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #42b6dd;
-}
-
-.error {
-  color: red;
-  font-size: 13px;
-}
-@media (max-width: 575px) {
-  .register-container {
-    width: 90%;
-    margin: 30px auto;
-    padding: 16px 12px;
-  }
-
-  .register-container label {
-    font-size: 14px;
-    margin-top: 0px;
-  }
-
-  .register-container input,
-  .register-container select {
-    font-size: 12px;
-    padding: 5px;
-    margin-bottom: 0;
-  }
-
-  .form {
-    gap: 8px;
-  }
-
-  .input {
-    font-size: 13px;
-    padding: 8px;
-  }
-
-  .button {
-        font-size: 14px;
-        padding: 4px 0px;
-        width: 100%;
-        margin-top: 5px;
-  }
-
-  .error {
-    font-size: 12px;
-  }
-
-  .register-link {
-    font-size: 14px;
-  }
-
-  .form h2 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .form p {
-    font-size: 14px;
-    text-align: center;
-    margin-top: 5px;
-  }
-}
- */
- .register-container{
-  width: 340px;
-  margin: 60px auto;
-  padding: 20px 16px; 
-  border: 2px solid #333;
-  border-radius: 12px;
-  background-color: #f9f9f9;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.08);
-}
-.register-container label{
-    display: block;
-  margin-bottom: 5px;
-  font-size: 16px;
-  margin-top: 15px;
-}
- .form h2 {
-    font-size: 26px;
-    text-align: center;
-  }
-
-.register-container input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 10px;
-  border: 2px solid #666;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-.register-container select {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 10px;
-  border: 2px solid #666;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-}
-
-.input {
-  padding: 8px; 
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  
-}
-
-.button {
-  padding: 8px 16px; 
+  padding: 8px 16px;
   background-color: #a3e4f2;
   color: #004c66;
   font-size: 0.95rem;

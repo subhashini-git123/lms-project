@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
-import "./SetPassword.css"
+import "./SetPassword.css";
 const SetPassword = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -15,7 +15,7 @@ const SetPassword = () => {
       setError("Passwords do not match.");
     } else {
       setError("");
-      navigate("/reset-password"); 
+      navigate("/reset-password");
     }
   };
 
@@ -45,7 +45,9 @@ const SetPassword = () => {
 
         {error && <p className="error">{error}</p>}
 
-        <button className="setpassword-btn"  onClick={handleReset}>Reset Password</button>
+        <button className="setpassword-btn" onClick={handleReset}>
+          Reset Password
+        </button>
         <a href="/" className="back-link">
           ← Back to login
         </a>

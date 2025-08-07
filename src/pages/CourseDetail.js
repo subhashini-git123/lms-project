@@ -40,7 +40,8 @@ const CourseDetail = () => {
         {isDesktop ? <Toggle /> : <Sidebar />}
         <h2>{course.title}</h2>
         <p className="subtitle">
-          Master {course.title} to create Web Applications & go from basic to advanced
+          Master {course.title} to create Web Applications & go from basic to
+          advanced
         </p>
         <p className="updated-date">Last Update January 24, 2025</p>
       </div>
@@ -64,14 +65,17 @@ const CourseDetail = () => {
               <div>
                 <h4>Course Overview</h4>
                 <p>
-                  This course provides a comprehensive introduction to {course.title}, 
-                  covering fundamental concepts and practical applications. You will learn how 
-                  to build modern web applications using industry-standard tools and techniques. 
-                  By the end of this course, you'll have a solid understanding of core principles and best practices.
+                  This course provides a comprehensive introduction to{" "}
+                  {course.title}, covering fundamental concepts and practical
+                  applications. You will learn how to build modern web
+                  applications using industry-standard tools and techniques. By
+                  the end of this course, you'll have a solid understanding of
+                  core principles and best practices.
                 </p>
                 <p>
-                  Whether you’re a beginner or looking to refresh your skills, this course is designed 
-                  to guide you step-by-step through the learning process with real-world examples and projects.
+                  Whether you’re a beginner or looking to refresh your skills,
+                  this course is designed to guide you step-by-step through the
+                  learning process with real-world examples and projects.
                 </p>
               </div>
             )}
@@ -94,21 +98,34 @@ const CourseDetail = () => {
               <div>
                 <h4>Instructor</h4>
                 <p>
-                  Jane Doe is a senior software engineer with over 10 years of experience in web development.
-                  She specializes in React and JavaScript and has a passion for teaching and mentoring aspiring developers.
+                  Jane Doe is a senior software engineer with over 10 years of
+                  experience in web development. She specializes in React and
+                  JavaScript and has a passion for teaching and mentoring
+                  aspiring developers.
                 </p>
                 <p>
-                  Jane has worked with several top tech companies and has contributed to open source projects, 
-                  making her an expert in modern frontend development.
+                  Jane has worked with several top tech companies and has
+                  contributed to open source projects, making her an expert in
+                  modern frontend development.
                 </p>
               </div>
             )}
             {activeTab === "reviews" && (
               <div>
                 <h4>Student Reviews</h4>
-                <p><strong>John S.</strong> - "This course was exactly what I needed to get started with React. Clear explanations and great examples!"</p>
-                <p><strong>Maria K.</strong> - "Highly recommend! The curriculum is well structured and the instructor is very knowledgeable."</p>
-                <p><strong>Alex P.</strong> - "I appreciated the hands-on projects and practical approach. Helped me build confidence."</p>
+                <p>
+                  <strong>John S.</strong> - "This course was exactly what I
+                  needed to get started with React. Clear explanations and great
+                  examples!"
+                </p>
+                <p>
+                  <strong>Maria K.</strong> - "Highly recommend! The curriculum
+                  is well structured and the instructor is very knowledgeable."
+                </p>
+                <p>
+                  <strong>Alex P.</strong> - "I appreciated the hands-on
+                  projects and practical approach. Helped me build confidence."
+                </p>
               </div>
             )}
           </div>
@@ -127,10 +144,12 @@ const CourseDetail = () => {
 
           <ul className="course-info-list">
             <li>
-              <GoBook /> <strong>Duration</strong> <span>{course.duration}</span>
+              <GoBook /> <strong>Duration</strong>{" "}
+              <span>{course.duration}</span>
             </li>
             <li>
-              <RxClock /> <strong>Lectures</strong> <span>{course.lessons ?? "N/A"}</span>
+              <RxClock /> <strong>Lectures</strong>{" "}
+              <span>{course.lessons ?? "N/A"}</span>
             </li>
             <li>
               <BsWatch /> <strong>Skill Level</strong> <span>Beginner</span>
