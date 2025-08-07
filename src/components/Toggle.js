@@ -30,27 +30,6 @@ const Toggle = ({ children }) => {
 
 export default Toggle;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // // import React, { useState } from "react";
 // // import Sidebar from "./Sidebar";
 // // import "./Toggle.css";
