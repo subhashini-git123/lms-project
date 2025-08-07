@@ -8,7 +8,7 @@ const Chat = () => {
     { sender: "manager", text: "................................" },
   ]);
   const [input, setInput] = useState("");
-  const [isUserNext, setIsUserNext] = useState(true); 
+  const [isUserNext, setIsUserNext] = useState(true);
 
   const handleSend = () => {
     if (input.trim()) {
@@ -19,7 +19,7 @@ const Chat = () => {
 
       setMessages([...messages, newMessage]);
       setInput("");
-      setIsUserNext(!isUserNext); 
+      setIsUserNext(!isUserNext);
     }
   };
 
